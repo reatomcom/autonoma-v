@@ -1,0 +1,122 @@
+<meta charset="utf-8">
+<title>{{ this.page.title }} | autonoma-v.lv</title>
+<!-- SEO Meta Tags-->
+<meta name="description" content="Finder - Directory &amp; Listings Bootstrap Template">
+<meta name="keywords" content="bootstrap, business, directory, listings, e-commerce, car dealer, city guide, real estate, job board, user account, multipurpose, ui kit, html5, css3, javascript, gallery, slider, touch">
+<meta name="author" content="Createx Studio">
+<!-- Viewport-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Favicon and Touch Icons-->
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/themes/re/assets/favicon/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/themes/re/assets/favicon/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/themes/re/assets/favicon/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/themes/re/assets/favicon/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/themes/re/assets/favicon/apple-touch-icon-60x60.png" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/themes/re/assets/favicon/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/themes/re/assets/favicon/apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/themes/re/assets/favicon/apple-touch-icon-152x152.png" />
+<link rel="icon" type="image/png" href="/themes/re/assets/favicon/favicon-196x196.png" sizes="196x196" />
+<link rel="icon" type="image/png" href="/themes/re/assets/favicon/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/png" href="/themes/re/assets/favicon/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="/themes/re/assets/favicon/favicon-16x16.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="/themes/re/assets/favicon/favicon-128.png" sizes="128x128" />
+<meta name="application-name" content="&nbsp;"/>
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="/themes/re/assets/favicon/mstile-144x144.png" />
+<meta name="msapplication-square70x70logo" content="/themes/re/assets/favicon/mstile-70x70.png" />
+<meta name="msapplication-square150x150logo" content="/themes/re/assets/favicon/mstile-150x150.png" />
+<meta name="msapplication-wide310x150logo" content="/themes/re/assets/favicon/mstile-310x150.png" />
+<meta name="msapplication-square310x310logo" content="/themes/re/assets/favicon/mstile-310x310.png" />
+
+<link rel="manifest" href="site.webmanifest">
+<link rel="mask-icon" color="#5bbad5" href="safari-pinned-tab.svg">
+<meta name="msapplication-TileColor" content="#766df4">
+<meta name="theme-color" content="#ffffff">
+<!-- Page loading styles-->
+<style>
+    .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+    }
+    .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+    }
+    .page-loading.active > .page-loading-inner {
+        opacity: 1;
+    }
+    .page-loading-inner > span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #666276;;
+    }
+    .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        border: .15em solid #bbb7c5;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+    }
+    @-webkit-keyframes spinner {
+        100% {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }
+    @keyframes spinner {
+        100% {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }
+    
+</style>
+<!-- Page loading scripts-->
+<script>
+    (function () {
+        window.onload = function () {
+            var preloader = document.querySelector('.page-loading');
+            preloader.classList.remove('active');
+            setTimeout(function () {
+                preloader.remove();
+            }, 2000);
+        };
+    })();
+    
+</script>
+<!-- Vendor Styles-->
+<link rel="stylesheet" media="screen" href="/themes/re/assets/vendor/simplebar/dist/simplebar.min.css"/>
+<link rel="stylesheet" media="screen" href="/themes/re/assets/vendor/lightgallery.js/dist/css/lightgallery.min.css"/>
+<link rel="stylesheet" media="screen" href="/themes/re/assets/vendor/tiny-slider/dist/tiny-slider.css"/>
+<link rel="stylesheet" media="screen" href="/themes/re/assets/vendor/flatpickr/dist/flatpickr.min.css"/>
+<!-- Main Theme Styles + Bootstrap-->
+<link rel="stylesheet" media="screen" href="/themes/re/assets/css/theme.min.css">
