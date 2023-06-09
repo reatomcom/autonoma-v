@@ -1,0 +1,74 @@
+title = "Kontakti"
+layout = "default"
+url = "/contact"
+==
+<div class="container mt-5 mb-md-4 pt-5">
+    <nav class="mb-3 pt-md-3" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">{{ 'Sākums'|_ }}</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{ 'Kontakti'|_ }}</li>
+        </ol>
+    </nav>
+</div>
+<!-- Hero-->
+<section class="container mb-5 pb-2 pb-md-4 pb-lg-5">
+    <div class="row align-items-md-start align-items-center gy-4">
+        <div class="col-lg-5 col-md-6">
+            <h1 class="mb-4">{{ 'Sazinies ar mums'|_ }}</h1>
+            <p class="mb-0 fs-lg text-muted">{{ 'Labprāt atbildēsim uz jums interesējošiem jautājumiem un esam gatavi palīdzēt ar jūsu nomu.'|_ }}</p>
+            
+            <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1088.5117505964547!2d24.19229!3d56.931264!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eecdfe15cfb203%3A0x7495d92c7532970c!2zTHVixIFuYXMgaWVsYSA3MCwgTGF0Z2FsZXMgcHJpZWvFoXBpbHPEk3RhLCBSxKtnYSwgTFYtMTA3MywgTGF0dmlh!5e0!3m2!1sen!2sus!4v1686296902822!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <div class="col-md-6 offset-lg-1">
+            <div class="card border-0 bg-secondary p-sm-3 p-2">
+                <div class="card-body m-1">
+                    <form class="needs-validation" novalidate>
+                        <div class="mb-4">
+                            <label class="form-label" for="c-name">Full Name</label>
+                            <input class="form-control form-control-lg" id="c-name" type="text" required>
+                            <div class="invalid-tooltip mt-1">Please, enter your name</div>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label" for="c-email">Your Email</label>
+                            <input class="form-control form-control-lg" id="c-email" type="email" required>
+                            <div class="invalid-tooltip mt-1">Please, enter your email</div>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label" for="c-message">Message</label>
+                            <textarea class="form-control form-control-lg" id="c-message" rows="4" placeholder="Leave your message" required></textarea>
+                            <div class="invalid-tooltip mt-1">Please, type your message</div>
+                        </div>
+                        <div class="pt-sm-2 pt-1">
+                            <button class="btn btn-lg btn-primary w-sm-auto w-100" type="submit">Submit form</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Contact cards-->
+<section class="container mb-5 pb-2 pb-md-4 pb-lg-5">
+    <div class="row g-4">
+        <!-- Item-->
+        <div class="col-md-4"><a class="icon-box card card-hover h-100" href="mailto:info@autonoma-v.lv">
+            <div class="card-body">
+                <div class="icon-box-media text-primary rounded-circle shadow-sm mb-3"><i class="fi-mail"></i></div><span class="d-block mb-1 text-body">Drop us a line</span>
+                <h3 class="h4 icon-box-title mb-0 opacity-90">info@autonoma-v.lv</h3>
+            </div></a></div>
+            <!-- Item-->
+            <div class="col-md-4"><a class="icon-box card card-hover h-100" href="tel:+37129233761">
+                <div class="card-body">
+                    <div class="icon-box-media text-primary rounded-circle shadow-sm mb-3"><i class="fi-device-mobile"></i></div><span class="d-block mb-1 text-body">Call us any time</span>
+                    <h3 class="h4 icon-box-title mb-0 opacity-90">(+371) 29 233 761</h3>
+                </div></a></div>
+                <!-- Item-->
+                <div class="col-md-4"><a class="icon-box card card-hover h-100" href="#">
+                    <div class="card-body">
+                        <div class="icon-box-media text-primary rounded-circle shadow-sm mb-3"><i class="fi-facebook"></i></div><span class="d-block mb-1 text-body">Follow us</span>
+                        <h3 class="h4 icon-box-title mb-0 opacity-90">@autonoma.lv</h3>
+                    </div></a></div>
+                </div>
+            </section>
