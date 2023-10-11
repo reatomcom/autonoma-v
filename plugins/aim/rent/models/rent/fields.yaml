@@ -1,0 +1,46 @@
+fields:
+    name:
+        label: Nosaukums
+        span: full
+        type: text
+    picture:
+        label: 'Auto Bilde'
+        span: auto
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        imageWidth: '100'
+        imageHeight: '100'
+        type: fileupload
+    description:
+        label: Apraksts
+        size: ''
+        span: auto
+        type: richeditor
+    price:
+        label: Cena
+        span: full
+        readOnly: 0
+        type: number
+    year:
+        label: Gads
+        span: auto
+        type: text
+    engine:
+        label: Motors
+        span: auto
+        type: text
+    transmission:
+        label: Ātrumkārba
+        span: auto
+        type: text
+    seats:
+        label: Sēdvietas
+        span: auto
+        type: number
+    beds:
+        label: Gūltas
+        span: auto
+        type: number
