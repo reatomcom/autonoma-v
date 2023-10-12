@@ -6,6 +6,19 @@ plugin:
     homepage: ''
 navigation:
     main-menu-item:
-        label: Autonoma-v
-        url: aim/rent/autonoma_v
+        label: Products
+        url: aim/rent/products
         icon: icon-car
+        sideMenu:
+            side-menu-item:
+                label: Rezervations
+                url: aim/rent/rezervations
+                icon: icon-car
+            side-menu-item2:
+                label: Products
+                url: aim/rent/products
+                icon: icon-car
+permissions:
+    Q2igT7Pzudg2V6i6CVn4V9rv8zG5RfEq:
+        tab: Aim.Rent/permissions
+        label: Aim.Rent/permissions

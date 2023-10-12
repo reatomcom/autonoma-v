@@ -1,6 +1,6 @@
 <?php return [
     'plugin' => [
-        'name' => 'Aim.Rent',
+        'name' => 'Rent',
         'description' => ''
     ]
 ];
