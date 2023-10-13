@@ -10,14 +10,18 @@ navigation:
         url: aim/rent/products
         icon: icon-car
         sideMenu:
-            side-menu-item:
-                label: Rezervations
-                url: aim/rent/rezervations
-                icon: icon-car
             side-menu-item2:
                 label: Products
                 url: aim/rent/products
                 icon: icon-car
+            side-menu-item:
+                label: Reservations
+                url: aim/rent/reservations
+                icon: icon-calendar
+            side-menu-item3:
+                label: 'Product Units'
+                url: aim/rent/product_units
+                icon: icon-gear
 permissions:
     Q2igT7Pzudg2V6i6CVn4V9rv8zG5RfEq:
         tab: Aim.Rent/permissions

@@ -24,8 +24,10 @@ class Plugin extends PluginBase
     /**
      * registerComponents used by the frontend.
      */
-    public function registerComponents()
-    {
+    public function registerComponents(){
+        return [
+            'Aim\Rent\Components\ProductProfile' => 'productProfile'
+        ];
     }
 
     /**
