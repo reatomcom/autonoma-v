@@ -1,0 +1,11 @@
+plugin:
+    name: Aim.Rent
+    description: 'aim.rent::lang.plugin.description'
+    author: Aim
+    icon: oc-icon-car
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Autonoma-v
+        url: aim/rent/autonoma_v
+        icon: icon-car
