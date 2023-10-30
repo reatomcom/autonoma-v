@@ -1,0 +1,25 @@
+columns:
+    id:
+        label: ID
+        type: number
+    title:
+        label: Title
+        type: text
+    is_active:
+        label: Active
+        type: switch
+    brand:
+        label: Brand
+        type: text
+    model:
+        label: Model
+        type: text
+    year:
+        label: Year
+        type: number
+    beds:
+        label: Beds
+        type: number
+    options:
+        label: Options
+        type: partial

@@ -1,0 +1,47 @@
+<?php if ($record->has_wc): ?>
+    <i class="ti ti-toilet-paper text-success h4" data-bs-toggle="tooltip" title="Toilet Available"></i>
+<?php else: ?>
+    <i class="ti ti-toilet-paper text-danger h4" data-bs-toggle="tooltip" title="Doesn't Have Toilet"></i>
+<?php endif; ?>
+
+<?php if ($record->has_shower): ?>
+    <i class="icon-shower text-success h4" data-bs-toggle="tooltip" title="Shower Available"></i>
+<?php else: ?>
+    <i class="icon-shower text-danger h4" data-bs-toggle="tooltip" title="Doesn't Have Shower"></i>
+<?php endif; ?>
+
+<?php if ($record->has_kitchen): ?>
+    <i class="ti ti-tools-kitchen-2 text-success h4" data-bs-toggle="tooltip" title="Kitchen Available"></i>
+<?php else: ?>
+    <i class="ti ti-tools-kitchen-2 text-danger h4" data-bs-toggle="tooltip" title="Doesn't Have kitchen"></i>
+<?php endif; ?>
+
+<?php if ($record->has_ac): ?>
+    <i class="ti ti-air-conditioning text-success h4" data-bs-toggle="tooltip" title="AC Available"></i>
+<?php else: ?>
+    <i class="ti ti-air-conditioning text-danger h4" data-bs-toggle="tooltip" title="Doesn't have AC"></i>
+<?php endif; ?>
+
+<?php if ($record->has_heating): ?>
+    <i class="ti ti-sun-high text-success h4" data-bs-toggle="tooltip" title="Heating Available"></i>
+<?php else: ?>
+    <i class="ti ti-sun-high text-danger h4" data-bs-toggle="tooltip" title="Doesn't Have Heating"></i>
+<?php endif; ?>
+
+<?php if ($record->has_tv): ?>
+    <i class="ti ti-device-tv text-success h4" data-bs-toggle="tooltip" title="TV Available"></i>
+<?php else: ?>
+    <i class="ti ti-device-tv text-danger h4" data-bs-toggle="tooltip" title="Doesn't Have TV"></i>
+<?php endif; ?>
+
+<?php if ($record->has_bike_rack): ?>
+    <i class="ti ti-bike text-success h4" data-bs-toggle="tooltip" title="Bike Rack Available"></i>
+<?php else: ?>
+    <i class="ti ti-bike text-danger h4" data-bs-toggle="tooltip" title="Doesn't Have Bike Rack"></i>
+<?php endif; ?>
+
+<?php if ($record->has_pets_allowed): ?>
+    <i class="ti ti-dog text-success h4" data-bs-toggle="tooltip" title="Pets are allowed"></i>
+<?php else: ?>
+    <i class="ti ti-dog text-danger h4" data-bs-toggle="tooltip" title="Pets Are Not Allowed"></i>
+<?php endif; ?>

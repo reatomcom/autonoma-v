@@ -1,0 +1,10 @@
+name: Reservations
+form: $/aim/rent/models/reservation/fields.yaml
+modelClass: Aim\Rent\Models\Reservation
+defaultRedirect: aim/rent/reservations
+create:
+    redirect: 'aim/rent/reservations/update/:id'
+    redirectClose: aim/rent/reservations
+update:
+    redirect: aim/rent/reservations
+    redirectClose: aim/rent/reservations

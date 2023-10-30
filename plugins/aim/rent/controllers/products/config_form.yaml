@@ -1,0 +1,10 @@
+name: Products
+form: $/aim/rent/models/product/fields.yaml
+modelClass: Aim\Rent\Models\Product
+defaultRedirect: aim/rent/products
+create:
+    redirect: 'aim/rent/products/update/:id'
+    redirectClose: aim/rent/products
+update:
+    redirect: aim/rent/products
+    redirectClose: aim/rent/products

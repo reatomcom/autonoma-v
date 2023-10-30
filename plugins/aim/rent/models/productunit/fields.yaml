@@ -1,0 +1,124 @@
+tabs:
+    fields:
+        has_wc:
+            label: WC
+            span: auto
+            type: switch
+            tab: Options
+        has_shower:
+            label: Shower
+            span: auto
+            type: switch
+            tab: Options
+        has_kitchen:
+            label: Kitchen
+            span: auto
+            type: switch
+            tab: Options
+        has_tv:
+            label: TV
+            span: auto
+            cssClass: ''
+            type: switch
+            tab: Options
+        has_heating:
+            label: Heating
+            span: auto
+            type: switch
+            tab: Options
+        has_ac:
+            label: AC
+            span: auto
+            type: switch
+            tab: Options
+        has_bike_rack:
+            label: 'Bike rack'
+            span: auto
+            type: switch
+            tab: Options
+        has_pets_allowed:
+            label: 'Pets allowed'
+            span: auto
+            type: switch
+            tab: Options
+        engine_type:
+            label: 'Engine type'
+            showSearch: true
+            span: auto
+            type: dropdown
+            tab: Engine
+        engine_size:
+            label: 'Engine size'
+            span: auto
+            type: text
+            tab: Engine
+        engine_power:
+            label: 'Engine power'
+            span: auto
+            type: text
+            tab: Engine
+        gearbox_type:
+            label: 'Gearbox type'
+            showSearch: true
+            span: auto
+            type: dropdown
+            tab: Gearbox
+        gearbox_shifts:
+            label: 'Gearbox shifts'
+            span: auto
+            type: number
+            tab: Gearbox
+fields:
+    id:
+        label: Id
+        span: auto
+        type: number
+    title:
+        label: Title
+        span: auto
+        type: text
+    is_active:
+        label: 'Is active'
+        span: auto
+        type: switch
+    notes:
+        label: Notes
+        span: auto
+        type: textarea
+    licence_plate:
+        label: 'Licence plate'
+        span: auto
+        type: text
+    brand:
+        label: Brand
+        span: auto
+        type: text
+    model:
+        label: Model
+        span: auto
+        type: text
+    year:
+        label: Year
+        span: auto
+        type: number
+    description:
+        label: Description
+        size: large
+        span: full
+        type: richeditor
+    beds:
+        label: Beds
+        span: auto
+        type: number
+    product:
+        label: Product
+        nameFrom: title
+        descriptionFrom: id
+        list: $/aim/rent/models/product/columns.yaml
+        span: auto
+        type: recordfinder
+    slug:
+        label: Slug
+        span: auto
+        defaultFrom: title
+        type: text

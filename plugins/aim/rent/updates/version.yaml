@@ -1,26 +1,14 @@
 v1.0.1:
     - 'Initialize plugin'
 v1.0.2:
-    - 'Created table aim_rent_'
-    - builder_table_create_aim_rent_.php
+    - 'Created table aim_rent_products'
+    - builder_table_create_aim_rent_products.php
 v1.0.3:
-    - 'Updated table aim_rent_'
-    - builder_table_update_aim_rent_.php
+    - 'Created table aim_rent_product_units'
+    - builder_table_create_aim_rent_product_units.php
 v1.0.4:
-    - 'Updated table aim_rent_'
-    - builder_table_update_aim_rent__2.php
-v1.0.5:
-    - 'Updated table aim_rent_'
-    - builder_table_update_aim_rent__3.php
-v1.0.6:
-    - 'Updated table aim_rent_'
-    - builder_table_update_aim_rent__4.php
-v1.0.7:
-    - 'Updated table aim_rent_'
-    - builder_table_update_aim_rent__5.php
-v1.0.8:
-    - 'Updated table aim_rent_'
-    - builder_table_update_aim_rent__6.php
-v1.0.9:
-    - 'Updated table aim_rent_'
-    - builder_table_update_aim_rent__7.php
+    - 'Created table aim_rent_reservations'
+    - builder_table_create_aim_rent_reservations.php
+v2.0.1:
+    - 'Seeder Products'
+    - seeder_products.php
