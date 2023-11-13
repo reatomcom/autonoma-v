@@ -1,0 +1,68 @@
+fields:
+    product:
+        label: Product
+        nameFrom: title
+        descriptionFrom: id
+        list: $/aim/rent/models/product/columns.yaml
+        span: auto
+        type: recordfinder
+    product_unit:
+        label: 'Product unit'
+        nameFrom: title
+        descriptionFrom: id
+        list: $/aim/rent/models/productunit/columns.yaml
+        span: auto
+        type: recordfinder
+    start_date:
+        label: 'Start date'
+        mode: datetime
+        span: auto
+        type: datepicker
+    end_date:
+        label: 'End date'
+        span: auto
+        type: datepicker
+    days:
+        label: Days
+        span: auto
+        type: number
+    in_total:
+        label: 'In total'
+        span: auto
+        type: number
+    invoice_id:
+        label: 'Invoice id'
+        span: auto
+        type: number
+    status:
+        label: Status
+        span: auto
+        type: dropdown
+    extra_info:
+        label: 'Extra info'
+        span: auto
+        type: textarea
+    client_name_surname:
+        label: 'Client name surname'
+        span: auto
+        type: textarea
+    client_phone_number:
+        label: 'Client phone number'
+        span: auto
+        type: textarea
+    client_email:
+        label: 'Client email'
+        span: auto
+        type: textarea
+    inside_notes:
+        label: 'Inside notes'
+        span: auto
+        type: textarea
+    created_at:
+        label: 'Created at'
+        span: auto
+        type: datepicker
+    updated_at:
+        label: 'Updated at'
+        span: auto
+        type: datepicker

@@ -1,0 +1,149 @@
+tabs:
+    fields:
+        price_season_week_1:
+            label: 'Price S1'
+            span: auto
+            type: number
+            tab: Prices
+        price_offseason_week_1:
+            label: 'Price OS1'
+            span: auto
+            type: number
+            tab: Prices
+        price_season_week_2:
+            label: 'Price S2'
+            span: auto
+            type: number
+            tab: Prices
+        price_offseason_week_2:
+            label: 'Price OS2'
+            span: auto
+            type: number
+            tab: Prices
+        price_season_week_3:
+            label: 'Price S3'
+            span: auto
+            type: number
+            tab: Prices
+        price_offseason_week_3:
+            label: 'Price OS3'
+            span: auto
+            type: number
+            tab: Prices
+        price_season_week_4:
+            label: 'Price S4'
+            span: auto
+            type: number
+            tab: Prices
+        price_offseason_week_4:
+            label: 'Price OS4'
+            span: auto
+            type: number
+            tab: Prices
+        has_wc:
+            label: WC
+            span: auto
+            type: switch
+            tab: Options
+        has_shower:
+            label: Shower
+            span: auto
+            type: switch
+            tab: Options
+        has_kitchen:
+            label: Kitchen
+            span: auto
+            cssClass: ''
+            type: switch
+            tab: Options
+        has_tv:
+            label: TV
+            span: auto
+            type: switch
+            tab: Options
+            icon: icon-dropbox
+        has_heating:
+            label: Heating
+            span: auto
+            type: switch
+            tab: Options
+        has_ac:
+            label: AC
+            span: auto
+            type: switch
+            tab: Options
+        has_bike_rack:
+            label: 'Bike rack'
+            span: auto
+            type: switch
+            tab: Options
+        has_pets_allowed:
+            label: 'Pets allowed'
+            span: auto
+            type: switch
+            tab: Options
+        engine_type:
+            label: 'Engine type'
+            showSearch: true
+            span: auto
+            type: dropdown
+            tab: Engine
+        engine_power:
+            label: 'Engine power'
+            span: auto
+            type: text
+            tab: Engine
+        engine_size:
+            label: 'Engine size'
+            span: auto
+            type: text
+            tab: Engine
+        gearbox_type:
+            label: 'Gearbox type'
+            showSearch: true
+            span: auto
+            type: dropdown
+            tab: Gearbox
+        gearbox_shifts:
+            label: 'Gearbox shifts'
+            span: auto
+            type: number
+            tab: Gearbox
+fields:
+    title:
+        label: Title
+        span: auto
+        type: text
+    brand:
+        label: Brand
+        span: auto
+        type: text
+    model:
+        label: Model
+        span: auto
+        type: text
+    year:
+        label: Year
+        span: auto
+        type: number
+    beds:
+        label: Beds
+        span: auto
+        type: number
+    is_active:
+        label: 'Is active'
+        span: auto
+        type: switch
+    description:
+        label: Description
+        size: large
+        span: full
+        type: richeditor
+    slug:
+        label: Slug
+        span: auto
+        defaultFrom: title
+        preset:
+            field: title
+            type: slug
+        type: text
