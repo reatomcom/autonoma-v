@@ -47,4 +47,7 @@ class Product extends Model
 
         ];
     }
+    public $attachMany = [
+        'avatar' => \System\Models\File::class
+    ];
 }

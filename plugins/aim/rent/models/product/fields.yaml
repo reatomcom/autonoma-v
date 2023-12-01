@@ -109,6 +109,14 @@ tabs:
             span: auto
             type: number
             tab: Gearbox
+        images:
+            label: 'Images'
+            span: full
+            type: mediafinder
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
 fields:
     title:
         label: Title

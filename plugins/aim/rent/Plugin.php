@@ -26,6 +26,10 @@ class Plugin extends PluginBase
      */
     public function registerComponents()
     {
+        return [
+            'Aim\Rent\Components\ProductList' => 'productList',
+            'Aim\Rent\Components\ProductProfile' => 'productProfile'
+        ];
     }
 
     /**
@@ -34,4 +38,5 @@ class Plugin extends PluginBase
     public function registerSettings()
     {
     }
+    
 }

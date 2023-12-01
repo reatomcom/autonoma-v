@@ -1,6 +1,0 @@
-plugin:
-    name: 'aim.amv::lang.plugin.name'
-    description: 'aim.amv::lang.plugin.description'
-    author: Aim
-    icon: oc-icon-automobile
-    homepage: ''

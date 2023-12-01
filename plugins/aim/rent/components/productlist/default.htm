@@ -1,0 +1,238 @@
+<div class="container-fluid mt-5 pt-5 p-0">
+  <div class="row g-0 mt-n3">
+    <!-- Filters sidebar (Offcanvas on mobile)-->
+    <aside class="col-lg-4 col-xl-3 border-top-lg border-end-lg shadow-sm px-3 px-xl-4 px-xxl-5 pt-lg-2">
+      <div class="offcanvas-lg offcanvas-start" id="filters-sidebar">
+        <div class="offcanvas-header d-flex d-lg-none align-items-center">
+          <h2 class="h5 mb-0">Filters</h2>
+          <button class="btn-close" type="button" data-bs-dismiss="offcanvas" data-bs-target="#filters-sidebar"></button>
+        </div>
+        <div class="offcanvas-body py-lg-4">
+          {# <div class="pb-4 mb-2">
+            <select class="form-select mb-2">
+              <option value="" disabled="">Choose city</option>
+              <option value="Chicago">Chicago</option>
+              <option value="Dallas">Dallas</option>
+              <option value="Los Angeles">Los Angeles</option>
+              <option value="New York" selected="">New York</option>
+              <option value="San Diego">San Diego</option>
+            </select>
+            <select class="form-select">
+              <option value="" selected="" disabled="">Choose district</option>
+              <option value="Brooklyn">Brooklyn</option>
+              <option value="Manhattan">Manhattan</option>
+              <option value="Staten Island">Staten Island</option>
+              <option value="The Bronx">The Bronx</option>
+              <option value="Queens">Queens</option>
+            </select>
+          </div> #}
+          <div class="pb-4 mb-2">
+            <h3 class="h6">{{ 'Produkta tips'|_ }}</h3>
+            <select class="form-select mb-2">
+              <option value="" selected="" sdisabled="">{{ 'Izvēlieties tipu'|_ }}</option>
+              <option value="Chicago">{{ 'Mašīnas'|_ }}</option>
+              <option value="Dallas">{{ 'Kemperi' }}</option>
+              <option value="Los Angeles">{{ 'Aksesuāri'|_ }}</option>
+            </select>
+          </div>
+          <div class="pb-4 mb-2">
+            <h3 class="h6 pt-1">{{ 'Gultu skaits'|_ }}</h3>
+            <div class="btn-group btn-group-sm" role="group" aria-label="Choose number of bedrooms">
+              <input class="btn-check" type="radio" id="studio" name="bedrooms">
+              <label class="btn btn-outline-secondary fw-normal" for="bedrooms-2">2</label>
+              <input class="btn-check" type="radio" id="bedrooms-1" name="bedrooms" checked="">
+              <label class="btn btn-outline-secondary fw-normal" for="bedrooms">3</label>
+              <input class="btn-check" type="radio" id="bedrooms-2" name="bedrooms">
+              <label class="btn btn-outline-secondary fw-normal" for="bedrooms-2">4</label>
+              <input class="btn-check" type="radio" id="bedrooms-3" name="bedrooms">
+              <label class="btn btn-outline-secondary fw-normal" for="bedrooms-3">5</label>
+              <input class="btn-check" type="radio" id="bedrooms-4" name="bedrooms">
+              <label class="btn btn-outline-secondary fw-normal" for="bedrooms-4">6+</label>
+            </div>
+          </div>
+          <div class="pb-4 mb-2">
+            <h3 class="h6">Amenities</h3>
+            <div class="overflow-auto" data-simplebar="init" data-simplebar-auto-hide="false" style="height: 11rem;"><div class="simplebar-wrapper" style="margin: 0px;"><div class="simplebar-height-auto-observer-wrapper"><div class="simplebar-height-auto-observer"></div></div><div class="simplebar-mask"><div class="simplebar-offset" style="right: 0px; bottom: 0px;"><div class="simplebar-content-wrapper" tabindex="0" role="region" aria-label="scrollable content" style="height: 100%; overflow: hidden scroll;"><div class="simplebar-content" style="padding: 0px;">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="air-condition" checked="">
+                <label class="form-check-label fs-sm" for="air-condition">{{ 'Tualete'|_ }}</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="balcony">
+                <label class="form-check-label fs-sm" for="balcony">{{ 'Duša'|_ }}</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="garage" checked="">
+                <label class="form-check-label fs-sm" for="garage">{{ 'Virtuve'|_ }}</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gym">
+                <label class="form-check-label fs-sm" for="gym">{{ 'Gaisa Kondicionieris'|_ }}</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="parking">
+                <label class="form-check-label fs-sm" for="parking">{{ ''|_ }}</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="pool">
+                <label class="form-check-label fs-sm" for="pool">{{ ''|_ }}</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="camera">
+                <label class="form-check-label fs-sm" for="camera">{{ ''|_ }}</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="wifi" checked="">
+                <label class="form-check-label fs-sm" for="wifi">{{ ''|_ }}</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="laundry">
+                <label class="form-check-label fs-sm" for="laundry">{{ ''|_ }}</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="dishwasher">
+                <label class="form-check-label fs-sm" for="dishwasher">{{ ''|_ }}</label>
+              </div>
+            </div></div></div></div><div class="simplebar-placeholder" style="width: auto; height: 300px;"></div></div><div class="simplebar-track simplebar-horizontal" style="visibility: hidden;"><div class="simplebar-scrollbar simplebar-visible" style="width: 0px; display: none;"></div></div><div class="simplebar-track simplebar-vertical" style="visibility: visible;"><div class="simplebar-scrollbar simplebar-visible" style="height: 103px; transform: translate3d(0px, 0px, 0px); display: block;"></div></div></div>
+          </div>
+          <div class="border-top py-4">
+            <button class="btn btn-outline-primary" type="button"><i class="fi-rotate-right me-2"></i>Reset filters</button>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <!-- Page content-->
+    <div class="col-lg-8 col-xl-9 position-relative overflow-hidden pb-5 pt-4 px-3 px-xl-4 px-xxl-5">
+      <!-- Breadcrumb-->
+      <nav class="mb-3 pt-md-2" aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/">Sākums</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Kemperu noma</li>
+        </ol>
+      </nav>
+      <!-- Title-->
+      {# <div class="d-sm-flex align-items-center justify-content-between pb-3 pb-sm-4">
+        <h1 class="h2 mb-sm-0">Kemperu noma</h1><a class="d-inline-block fw-bold text-decoration-none py-1" href="#" data-bs-toggle-class="invisible" data-bs-target="#map"><i class="fi-map me-2"></i>Map view</a>
+      </div> #}
+      <!-- Sorting-->
+      <div class="d-flex flex-sm-row flex-column align-items-sm-center align-items-stretch my-2">
+        <div class="d-flex align-items-center flex-shrink-0">
+          <label class="fs-sm me-2 pe-1 text-nowrap" for="sortby"><i class="fi-arrows-sort text-muted mt-n1 me-2"></i>Sort by:</label>
+          <select class="form-select form-select-sm" id="sortby">
+            <option>Jaunākais</option>
+            <option>Popularitāte</option>
+            <option>Zema - Augsta Cena</option>
+            <option>Augsta - Zema Cena</option>  
+            <option>Augsts vērtējums</option>
+            <option>Vidējais vērtējums</option>
+          </select>
+        </div>
+        <hr class="d-none d-sm-block w-100 mx-4">
+        <div class="d-none d-sm-flex align-items-center flex-shrink-0 text-muted"><i class="fi-check-circle me-2"></i><span class="fs-sm mt-n1">{{ productCount ~ ' rezultāti'|_ }}</span></div>
+      </div>
+      <!-- Catalog grid-->
+      <div class="row g-4 py-4">
+        {% for product in products %}
+        <div class="col-sm-6 col-xl-4">
+          <div class="card shadow-sm card-hover border-0 h-100 tns-carousel-wrapper card-img-top card-img-hover">
+            {# <div class="tns-carousel-wrapper card-img-top card-img-hover"><a class="img-overlay" href="real-estate-single-v1.html"></a> #}
+              {# <div class="position-absolute start-0 top-0 pt-3 ps-3"><span class="d-table badge bg-info">New</span></div> #}
+              <div class="content-overlay end-0 top-0 pt-3 pe-3">
+                <button class="btn btn-icon btn-light btn-xs text-primary rounded-circle" type="button" data-bs-toggle="tooltip" data-bs-placement="left" aria-label="Add to Wishlist" data-bs-original-title="Add to Wishlist">
+                  <i class="fi-heart"></i>
+                </button>
+              </div>
+              <div class="tns-outer" id="tns3-ow">
+                <div class="tns-controls" aria-label="Carousel Navigation" tabindex="0">
+                  <button type="button" data-controls="prev" tabindex="-1" aria-controls="tns3">
+                    <i class="fi-chevron-left"></i>
+                  </button>
+                  <button type="button" data-controls="next" tabindex="-1" aria-controls="tns3">
+                    <i class="fi-chevron-right"></i>
+                  </button>
+                </div>
+                <div class="tns-liveregion tns-visually-hidden" aria-live="polite" aria-atomic="true">
+                  slide 
+                  <span class="current">3</span>  
+                  of 2
+                </div>
+                {# item #}
+                <div class="tns-carousel-wrapper">
+                  <div class="tns-carousel-inner" data-carousel-options="{&quot;navAsThumbnails&quot;: true, &quot;navContainer&quot;: &quot;#thumbnails&quot;, &quot;gutter&quot;: 12, &quot;responsive&quot;: {&quot;0&quot;:{&quot;controls&quot;: false},&quot;500&quot;:{&quot;controls&quot;: true}}}">
+                    {% for image in product.images %}
+                    <div>
+                        <img class="rounded-3" src="{{ image.getThumb(400, 180) }}" alt="Image">
+                    </div>
+                    {% endfor %}
+                  </div>
+              </div>
+                {# <div id="tiny-slider" class="col-sm-6 col-xl-4">
+                  <div class="card shadow-sm card-hover border-0 h-100">
+                    <div class="tns-carousel-wrapper card-img-top card-img-hover">
+                    <div class="tns-carousel-inner">
+                      {% for i in 1..10 %}
+                      <img class="tns-item" src="storage/app/media/{{ (i) ~ '.jpg' }}" alt="Image">
+                      {% endfor %}
+                    </div>
+                  </div>
+                  </div>
+                </div> #}
+                {# <div id="tns3-mw" class="tns-ovh tns-carousel-wrapper">
+                  <div class="tns-inner" id="tns3-iw">
+                    {% for i in 1..10 %}
+                    <div class="tns-item {% if i == 1 %}tns-slide-active{% endif %}" id="tns3-item{{ i-1 }}">
+                      <img class="img-fluid" src="storage/app/media/{{ (i) ~ '.jpg' }}" alt="Image">
+                    </div>
+                    {% endfor %}
+                  </div> #}
+                  {# <div class="tns-carousel-inner  tns-slider tns-carousel tns-subpixel tns-calc tns-horizontal" id="tns3" style="transition-duration: 0s; transform: translate3d(-33.3333%, 0px, 0px);">
+                    <img src="/home/adrians/sites/autonoma-v/themes/re/assets/img/car-finder/blog/01.jpg" alt="Image" class="tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
+                    <img src="img/real-estate/catalog/08.jpg" alt="Image" class="tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
+                    <img src="img/real-estate/catalog/08.jpg" alt="Image" class="tns-item tns-slide-active" id="tns3-item0">
+                    <img src="img/real-estate/catalog/08.jpg" alt="Image" class="tns-item" id="tns3-item1" aria-hidden="true" tabindex="-1">
+                    <img src="img/real-estate/catalog/08.jpg" alt="Image" class="tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
+                    <img src="img/real-estate/catalog/08.jpg" alt="Image" class="tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
+                  </div> #}
+                  {# </div> #}
+                  {# <div id="tns3-mw" class="tns-ovh"> #}
+                    {# <div class="tns-inner" id="tns3-iw">
+                       {% for i in 1..10 %}
+                      <div class="tns-item tns-slide-active" id="tns3-item{{ i-1 }}">
+                        <img class="img-fluid" src="/themes/re/assets/img/car-finder/blog/{{ (i < 10 ? '0' ~ i : i) ~ '.jpg' }}" alt="Image">
+                      </div>
+                      {% endfor %} 
+                    </div> #}
+                  {# </div>
+                </div> #}
+                <div class="tns-nav" aria-label="Carousel Pagination">
+                  {# <button type="button" data-nav="0" aria-controls="tns3" style="" aria-label="Carousel Page 1 (Current Slide)" class="tns-nav-active"> #}
+                    
+                  </button><button type="button" data-nav="1" tabindex="-1" aria-controls="tns3" style="" aria-label="Carousel Page 2"></button>
+                </div>
+                {# </div> #}
+              </div>
+              <div class="card-body position-relative pb-3">
+                <h3 class="h6 mb-2 fs-base">
+                  <a class="nav-link stretched-link" href="/rent/{{product.id}}">{{ product.brand ~ ' ' ~ product.model ~ ' ' ~ product.year }}</a>
+                </h3>
+                <p class="mb-2 fs-sm text-muted">{{ product.engine_type }}</p>
+                <div class="fw-bold"><i class="fi-cash mt-n1 me-2 lead align-middle opacity-70"></i>{{'No ' ~ product.price_offseason_week_4 ~ '€'}}</div>
+              </div>
+              <div class="card-footer d-flex align-items-center justify-content-center mx-3 pt-3 text-nowrap"><span class="d-inline-block mx-1 px-2 fs-sm">2<i class="fi-bed ms-1 mt-n1 fs-lg text-muted"></i></span><span class="d-inline-block mx-1 px-2 fs-sm">1<i class="fi-bath ms-1 mt-n1 fs-lg text-muted"></i></span><span class="d-inline-block mx-1 px-2 fs-sm">0<i class="fi-car ms-1 mt-n1 fs-lg text-muted"></i></span></div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  {# <img src='assets/img/car-finder/blog/0{{i}}.png' alt="Blog Image"> <!-- REmo ve this-->
+  if
+  <img src='assets/img/car-finder/blog/0{{i}}.png' alt="Blog Image"> <!-- REmo ve this--> #}
+  
+  
+  {% put script %}
+
+  
+  {% endput %}
+  
