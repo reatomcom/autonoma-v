@@ -39,6 +39,10 @@ class BuilderTableCreateAimRentProducts extends Migration
             $table->decimal('price_offseason_week_2', 10, 2)->nullable();
             $table->decimal('price_offseason_week_3', 10, 2)->nullable();
             $table->decimal('price_offseason_week_4', 10, 2)->nullable();
+            $table->smallInteger('season_from_month')->nullable();
+            $table->smallInteger('season_from_day')->nullable();
+            $table->smallInteger('season_to_month')->nullable();
+            $table->smallInteger('season_to_day')->nullable();
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
         });

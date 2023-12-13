@@ -23,3 +23,15 @@ columns:
     options:
         label: Options
         type: partial
+    season_from_month:
+        label: 'Season from month'
+        type: number
+    season_from_day:
+        label: 'Season from day '
+        type: number
+    offseason_from_month:
+        label: 'Offseason from month'
+        type: number
+    offseason_from_day:
+        label: 'Offseason from day'
+        type: number

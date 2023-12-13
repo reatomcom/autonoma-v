@@ -1,3 +1,41 @@
+fields:
+    title:
+        label: Title
+        span: auto
+        type: text
+    brand:
+        label: Brand
+        span: auto
+        type: text
+    model:
+        label: Model
+        span: auto
+        type: text
+    year:
+        label: Year
+        span: auto
+        type: number
+    beds:
+        label: Beds
+        span: auto
+        type: number
+    is_active:
+        label: 'Is active'
+        span: auto
+        type: switch
+    description:
+        label: Description
+        size: large
+        span: full
+        type: richeditor
+    slug:
+        label: Slug
+        span: auto
+        defaultFrom: title
+        preset:
+            field: title
+            type: slug
+        type: text
 tabs:
     fields:
         price_season_week_1:
@@ -110,48 +148,12 @@ tabs:
             type: number
             tab: Gearbox
         images:
-            label: 'Images'
-            span: full
-            type: mediafinder
+            label: Images
             mode: image
             useCaption: true
             thumbOptions:
                 mode: crop
-fields:
-    title:
-        label: Title
-        span: auto
-        type: text
-    brand:
-        label: Brand
-        span: auto
-        type: text
-    model:
-        label: Model
-        span: auto
-        type: text
-    year:
-        label: Year
-        span: auto
-        type: number
-    beds:
-        label: Beds
-        span: auto
-        type: number
-    is_active:
-        label: 'Is active'
-        span: auto
-        type: switch
-    description:
-        label: Description
-        size: large
-        span: full
-        type: richeditor
-    slug:
-        label: Slug
-        span: auto
-        defaultFrom: title
-        preset:
-            field: title
-            type: slug
-        type: text
+                extension: jpg
+            span: full
+            type: fileupload
+            tab: Images
