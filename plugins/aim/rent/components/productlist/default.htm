@@ -8,24 +8,6 @@
           <button class="btn-close" type="button" data-bs-dismiss="offcanvas" data-bs-target="#filters-sidebar"></button>
         </div>
         <div class="offcanvas-body py-lg-4">
-          {# <div class="pb-4 mb-2">
-            <select class="form-select mb-2">
-              <option value="" disabled="">Choose city</option>
-              <option value="Chicago">Chicago</option>
-              <option value="Dallas">Dallas</option>
-              <option value="Los Angeles">Los Angeles</option>
-              <option value="New York" selected="">New York</option>
-              <option value="San Diego">San Diego</option>
-            </select>
-            <select class="form-select">
-              <option value="" selected="" disabled="">Choose district</option>
-              <option value="Brooklyn">Brooklyn</option>
-              <option value="Manhattan">Manhattan</option>
-              <option value="Staten Island">Staten Island</option>
-              <option value="The Bronx">The Bronx</option>
-              <option value="Queens">Queens</option>
-            </select>
-          </div> #}
           <div class="pb-4 mb-2">
             <h3 class="h6">{{ 'Produkta tips'|_ }}</h3>
             <select class="form-select mb-2">
@@ -158,12 +140,16 @@
                 </div>
                 {# item #}
                 <div class="tns-carousel-wrapper">
-                  <div class="tns-carousel-inner" data-carousel-options="{&quot;navAsThumbnails&quot;: true, &quot;navContainer&quot;: &quot;#thumbnails&quot;, &quot;gutter&quot;: 12, &quot;responsive&quot;: {&quot;0&quot;:{&quot;controls&quot;: false},&quot;500&quot;:{&quot;controls&quot;: true}}}">
-                    {% for image in product.images %}
+                   <div>{#<div class="tns-carousel-inner" data-carousel-options="{&quot;navAsThumbnails&quot;: true, &quot;navContainer&quot;: &quot;#thumbnails&quot;, &quot;gutter&quot;: 12, &quot;responsive&quot;: {&quot;0&quot;:{&quot;controls&quot;: false},&quot;500&quot;:{&quot;controls&quot;: true}}}"> #}
+                    
                     <div>
-                        <img class="rounded-3" src="{{ image.getThumb(400, 180) }}" alt="Image">
+                      {% if product.first_image_url %}
+                        <img class="rounded-3" src="{{ product.first_image_url.getThumb(400, 180) }}" alt="Product Image">
+                      {% else %}
+                        <img class="rounded-3" src="{{ asset('/autonoma-v/themes/re/assets/img/logo/white-logo.png').getThumb(400, 180) }}" alt="Placeholder Image">
+                      {% endif %}
                     </div>
-                    {% endfor %}
+                    
                   </div>
               </div>
                 {# <div id="tiny-slider" class="col-sm-6 col-xl-4">

@@ -32,7 +32,11 @@
         "season_from_month": 6, 
         "season_from_day": 15,
         "season_to_month": 8, 
-        "season_to_day": 31
+        "season_to_day": 31,
+        "offseason_from_month": 9, 
+        "offseason_from_day": 1,
+        "offseason_to_month": 5, 
+        "offseason_to_day": 30
     },
     {
         "title": "Kemperis",
@@ -67,7 +71,11 @@
         "season_from_month": 6, 
         "season_from_day": 15,
         "season_to_month": 8, 
-        "season_to_day": 31
+        "season_to_day": 31,
+        "offseason_from_month": 9, 
+        "offseason_from_day": 1,
+        "offseason_to_month": 5, 
+        "offseason_to_day": 30
     },
     {
         "title": "Kemperis",
@@ -102,7 +110,11 @@
         "season_from_month": 6, 
         "season_from_day": 15,
         "season_to_month": 8, 
-        "season_to_day": 31
+        "season_to_day": 31,
+        "offseason_from_month": 9, 
+        "offseason_from_day": 1,
+        "offseason_to_month": 5, 
+        "offseason_to_day": 30
     },
     {
         "title": "Kemperis",
@@ -137,7 +149,11 @@
         "season_from_month": 6, 
         "season_from_day": 15,
         "season_to_month": 8, 
-        "season_to_day": 31
+        "season_to_day": 31,
+        "offseason_from_month": 9, 
+        "offseason_from_day": 1,
+        "offseason_to_month": 5, 
+        "offseason_to_day": 30
     },
     {
         "title": "Kemperis",
@@ -172,6 +188,10 @@
         "season_from_month": 6, 
         "season_from_day": 15,
         "season_to_month": 8, 
-        "season_to_day": 31
+        "season_to_day": 31,
+        "offseason_from_month": 9, 
+        "offseason_from_day": 1,
+        "offseason_to_month": 5, 
+        "offseason_to_day": 30
     }
 ]

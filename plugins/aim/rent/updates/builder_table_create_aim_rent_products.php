@@ -43,6 +43,10 @@ class BuilderTableCreateAimRentProducts extends Migration
             $table->smallInteger('season_from_day')->nullable();
             $table->smallInteger('season_to_month')->nullable();
             $table->smallInteger('season_to_day')->nullable();
+            $table->smallInteger('offseason_from_month')->nullable();
+            $table->smallInteger('offseason_from_day')->nullable();
+            $table->smallInteger('offseason_to_month')->nullable();
+            $table->smallInteger('offseason_to_day')->nullable();
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
         });

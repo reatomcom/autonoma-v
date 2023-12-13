@@ -8,10 +8,10 @@
     <nav class="mb-3 pt-md-3" aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item">
-                <a href="/">Sākums</a>
+                <a href="/">{{ 'Sākums'|_ }}</a>
             </li>
             <li class="breadcrumb-item">
-                <a href="/rent/">Kemperu noma</a>
+                <a href="/rent/">{{ 'Noma'|_ }}</a>
             </li>
             <li class="breadcrumb-item active" aria-current="page">
                 {{ product.brand ~ ' ' ~ product.model ~ ' ' ~ product.year }}
@@ -50,7 +50,7 @@
                         </li>
                         {% endfor %}
                         <li class="tns-thumbnail">
-                            <div class="d-flex flex-column align-items-center justify-content-center h-100"><i class="fi-play-circle fs-4 mb-1"></i><span>Play video</span></div>
+                            <div class="d-flex flex-column align-items-center justify-content-center h-100"><i class="fi-play-circle fs-4 mb-1"></i><span>{{ 'Atskaņot video'|_ }}</span></div>
                         </li>
                     </ul>
                 </div>
@@ -75,106 +75,115 @@
             
             <!-- Sidebar with details-->
             <aside>
-                {# <div class="ps-lg-5"> #}
-                    <div class="d-flex align-items-center justify-content-between mb-3">
-                        <div><span class="badge bg-success me-2 mb-2">Verified</span><span class="badge bg-info me-2 mb-2">New</span></div>
-                        <div class="text-nowrap">
-                            <button class="btn btn-icon btn-light-primary btn-xs shadow-sm rounded-circle ms-2 mb-2" type="button" data-bs-toggle="tooltip" title="Add to Wishlist"><i class="fi-heart"></i></button>
-                            <div class="dropdown d-inline-block" data-bs-toggle="tooltip" title="Share">
-                                <button class="btn btn-icon btn-light-primary btn-xs shadow-sm rounded-circle ms-2 mb-2" type="button" data-bs-toggle="dropdown"><i class="fi-share"></i></button>
-                                <div class="dropdown-menu dropdown-menu-end my-1">
-                                    <button class="dropdown-item" type="button"><i class="fi-facebook fs-base opacity-75 me-2"></i>Facebook</button>
-                                    <button class="dropdown-item" type="button"><i class="fi-twitter fs-base opacity-75 me-2"></i>Twitter</button>
-                                    <button class="dropdown-item" type="button"><i class="fi-instagram fs-base opacity-75 me-2"></i>Instagram</button>
-                                </div>
+                {# <div class="d-flex align-items-center justify-content-between mb-3">
+                    <div><span class="badge bg-success me-2 mb-2">Verified</span><span class="badge bg-info me-2 mb-2">New</span></div>
+                    <div class="text-nowrap">
+                        <button class="btn btn-icon btn-light-primary btn-xs shadow-sm rounded-circle ms-2 mb-2" type="button" data-bs-toggle="tooltip" title="Add to Wishlist"><i class="fi-heart"></i></button>
+                        <div class="dropdown d-inline-block" data-bs-toggle="tooltip" title="Share">
+                            <button class="btn btn-icon btn-light-primary btn-xs shadow-sm rounded-circle ms-2 mb-2" type="button" data-bs-toggle="dropdown"><i class="fi-share"></i></button>
+                            <div class="dropdown-menu dropdown-menu-end my-1">
+                                <button class="dropdown-item" type="button"><i class="fi-facebook fs-base opacity-75 me-2"></i>Facebook</button>
+                                <button class="dropdown-item" type="button"><i class="fi-twitter fs-base opacity-75 me-2"></i>Twitter</button>
+                                <button class="dropdown-item" type="button"><i class="fi-instagram fs-base opacity-75 me-2"></i>Instagram</button>
                             </div>
                         </div>
                     </div>
-                    <!--Price List-->
-                    <div class="card border-0 bg-secondary mb-4">
-                        <div class="card-body">
-                            <h5 class="mb-0 pb-3">Cenas</h5>
-                            <div class="rounded-3 bg-light" style="text-align: center">
-                                <table class="table ">
-                                  <thead>
+                </div> #}
+                <!--Price List-->
+                <div class="card border-0 bg-secondary mb-4">
+                    <div class="card-body">
+                        <h5 class="mb-0 pb-3">{{ 'Cenas'|_ }}</h5>
+                        <div class="rounded-3 bg-light" style="text-align: center">
+                            <table class="table">
+                                <thead>
                                     <tr>
                                         <th scope="col"></th>
                                         <th scope="col">
-                                            <i class="fa-solid fa-sun mt-n1 me-2 fs-lg align-middle"></i> Sezonā
+                                            <div>
+                                                <i class="fa-solid fa-sun mt-n1 me-2 fs-lg align-middle"></i>{{ 'Sezonā'|_ }}
+                                            </div>
+                                            <small class="small text-muted fw-normal pt-0">
+                                                {{ "%02d"|format(product.season_from_day) ~ '.' 
+                                                ~ "%02d"|format(product.season_from_month) ~ ' - ' 
+                                                ~ "%02d"|format(product.season_to_day) ~ '.' 
+                                                ~ "%02d"|format(product.season_to_month) }}
+                                            </small>
                                         </th>
                                         <th scope="col">
                                             <div>
-                                                <i class="fa-solid fa-snowflake mt-n1 me-2 fs-lg align-middle"></i> Nesezonā
+                                                <i class="fa-solid fa-snowflake mt-n1 me-2 fs-lg align-middle"></i>{{ 'Nesezonā'|_ }}
                                             </div>
-                                            <div class="small text-light font-weight-normal pt-0">
-                                                12.23 - 21.23
-                                            </div>
+                                            <small class="small text-muted fw-normal pt-0">
+                                                {{ "%02d"|format(product.offseason_from_day) ~ '.' 
+                                                ~ "%02d"|format(product.offseason_from_month) ~ ' - ' 
+                                                ~ "%02d"|format(product.offseason_to_day) ~ '.' 
+                                                ~ "%02d"|format(product.offseason_to_month) }}
+                                            </small>
                                         </th>
                                     </tr>
-                                  </thead>
-                                  <tbody>
+                                </thead>
+                                <tbody>
                                     <tr>
-                                        <td>1. nedēļa</td>
+                                        <td>{{ '1. nedēļa'|_ }}</td>
                                         <td>{{ product.price_season_week_1 ~ ' €' }}</td>
                                         <td>{{ product.price_offseason_week_1 ~ ' €'}}</td>
                                     </tr>
                                     <tr>
-                                        <td>2. nedēļa</td>
+                                        <td>{{ '2. nedēļa'|_ }}</td>
                                         <td>{{ product.price_season_week_2 ~ ' €' }}</td>
                                         <td>{{product.price_offseason_week_2 ~ ' €'}}</td>
                                     </tr>
                                     <tr>
-                                        <td>3. nedēļa</td>
+                                        <td>{{ '3. nedēļa'|_ }}</td>
                                         <td>{{product.price_season_week_3 ~ ' €'}}</td>
                                         <td>{{product.price_offseason_week_3 ~ ' €'}}</td>
                                     </tr>
                                     <tr>
-                                        <td>4. nedēļa</td>
+                                        <td>{{ '4. nedēļa'|_ }}</td>
                                         <td>{{product.price_season_week_4 ~ ' €'}}</td>
                                         <td>{{product.price_offseason_week_4 ~ ' €'}}</td>
                                     </tr>
-                                  </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div><a class="btn btn-lg btn-primary w-100 mb-3" href="#">Rezervēt</a>
-                    <!-- Amenities-->
-                    <div class="card border-0 bg-secondary mb-4">
-                        <div class="card-body">
-                            <h5>Ērtības</h5>
-                            <ul class="list-unstyled row row-cols-md-2 row-cols-1 gy-2 mb-0 text-nowrap">
-                                {% if product.has_wc == 1 %}
-                                <li class="col"><i class="fa-solid fa-toilet mt-n1 me-2 fs-lg align-middle"></i>{{ 'Tualete'|_ }}</li>
-                                {% endif %}
-                                {% if product.has_shower == 1 %}
-                                <li class="col"><i class="fa-solid fa-shower mt-n1 me-2 fs-lg align-middle"></i>{{ 'Duša'|_ }}</li>
-                                {% endif %}
-                                {% if product.has_kitchen == 1 %}
-                                <li class="col"><i class="fa-solid fa-fire-burner mt-n1 me-2 fs-lg align-middle"></i>{{ 'Virtuve'|_ }}</li>
-                                {% endif %}
-                                {% if product.has_ac == 1 %}
-                                <li class="col"><i class="fa-solid fa-fan mt-n1 me-2 fs-lg align-middle"></i>{{ 'Gaisa kondicionieris'|_ }}</li>
-                                {% endif %}
-                                {% if product.has_tv == 1 %}
-                                <li class="col"><i class="fa-solid fa-tv mt-n1 me-2 fs-lg align-middle"></i>{{ 'TV'|_ }}</li>
-                                {% endif %}
-                                {% if product.has_bike_rack == 1 %}
-                                <li class="col"><i class="fa-solid fa-bicycle mt-n1 me-2 fs-lg align-middle"></i>{{ 'Velosipēdu turētājs'|_ }}</li>
-                                {% endif %}
-                                {% if product.has_pets_allowed == 1 %}
-                                <li class="col"><i class="fa-solid fa-dog mt-n1 me-2 fs-lg align-middle"></i>{{ 'Atļauti mājdzīvnieki'|_ }}</li>
-                                {% endif %}
-                                {% if product.has_heating == 1 %}
-                                <li class="col"><i class="fa-solid fa-fire mt-n1 me-2 fs-lg align-middle"></i>{{ 'Apkure'|_ }}</li>
-                                {% endif %}
-                                {% if product.beds > 0 %}
-                                <li class="mt-2 mb-0"><i class="fa-solid fa-bed mt-n1 me-2 fs-lg align-middle"></i>{{product.beds}} {{ ''|_ }}</li>
-                                {% endif %}
-                                
-                            </ul>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
-                {# </div> #}
+                </div><a class="btn btn-lg btn-primary w-100 mb-3" href="#">{{ 'Rezervēt'|_ }}</a>
+                <!-- Amenities-->
+                <div class="card border-0 bg-secondary mb-4">
+                    <div class="card-body">
+                        <h5>{{ 'Ērtības'|_ }}</h5>
+                        <ul class="list-unstyled row row-cols-md-2 row-cols-1 gy-2 mb-0 text-nowrap">
+                            {% if product.has_wc == 1 %}
+                            <li class="col"><i class="fa-solid fa-toilet mt-n1 me-2 fs-lg align-middle"></i>{{ 'Tualete'|_ }}</li>
+                            {% endif %}
+                            {% if product.has_shower == 1 %}
+                            <li class="col"><i class="fa-solid fa-shower mt-n1 me-2 fs-lg align-middle"></i>{{ 'Duša'|_ }}</li>
+                            {% endif %}
+                            {% if product.has_kitchen == 1 %}
+                            <li class="col"><i class="fa-solid fa-fire-burner mt-n1 me-2 fs-lg align-middle"></i>{{ 'Virtuve'|_ }}</li>
+                            {% endif %}
+                            {% if product.has_ac == 1 %}
+                            <li class="col"><i class="fa-solid fa-fan mt-n1 me-2 fs-lg align-middle"></i>{{ 'Gaisa kondicionieris'|_ }}</li>
+                            {% endif %}
+                            {% if product.has_tv == 1 %}
+                            <li class="col"><i class="fa-solid fa-tv mt-n1 me-2 fs-lg align-middle"></i>{{ 'TV'|_ }}</li>
+                            {% endif %}
+                            {% if product.has_bike_rack == 1 %}
+                            <li class="col"><i class="fa-solid fa-bicycle mt-n1 me-2 fs-lg align-middle"></i>{{ 'Velosipēdu turētājs'|_ }}</li>
+                            {% endif %}
+                            {% if product.has_pets_allowed == 1 %}
+                            <li class="col"><i class="fa-solid fa-dog mt-n1 me-2 fs-lg align-middle"></i>{{ 'Atļauti mājdzīvnieki'|_ }}</li>
+                            {% endif %}
+                            {% if product.has_heating == 1 %}
+                            <li class="col"><i class="fa-solid fa-fire mt-n1 me-2 fs-lg align-middle"></i>{{ 'Apkure'|_ }}</li>
+                            {% endif %}
+                            {% if product.beds > 0 %}
+                            <li class="mt-2 mb-0"><i class="fa-solid fa-bed mt-n1 me-2 fs-lg align-middle"></i>{{product.beds}} {{ 'Gultas'|_ }}</li>
+                            {% endif %}
+                            
+                        </ul>
+                    </div>
+                </div>
             </aside>
         </div>
     </div>

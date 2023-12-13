@@ -1,41 +1,3 @@
-fields:
-    title:
-        label: Title
-        span: auto
-        type: text
-    brand:
-        label: Brand
-        span: auto
-        type: text
-    model:
-        label: Model
-        span: auto
-        type: text
-    year:
-        label: Year
-        span: auto
-        type: number
-    beds:
-        label: Beds
-        span: auto
-        type: number
-    is_active:
-        label: 'Is active'
-        span: auto
-        type: switch
-    description:
-        label: Description
-        size: large
-        span: full
-        type: richeditor
-    slug:
-        label: Slug
-        span: auto
-        defaultFrom: title
-        preset:
-            field: title
-            type: slug
-        type: text
 tabs:
     fields:
         price_season_week_1:
@@ -157,3 +119,61 @@ tabs:
             span: full
             type: fileupload
             tab: Images
+        season_from_month:
+            label: 'SF month'
+            span: auto
+            type: text
+            tab: Season
+        season_from_day:
+            label: 'SF day'
+            span: auto
+            type: text
+            tab: Season
+        season_to_month:
+            label: 'ST month'
+            span: auto
+            type: text
+            tab: Season
+        season_to_day:
+            label: 'ST day'
+            span: auto
+            type: text
+            tab: Season
+fields:
+    title:
+        label: Title
+        span: auto
+        type: text
+    brand:
+        label: Brand
+        span: auto
+        type: text
+    model:
+        label: Model
+        span: auto
+        type: text
+    year:
+        label: Year
+        span: auto
+        type: number
+    beds:
+        label: Beds
+        span: auto
+        type: number
+    is_active:
+        label: 'Is active'
+        span: auto
+        type: switch
+    description:
+        label: Description
+        size: large
+        span: full
+        type: richeditor
+    slug:
+        label: Slug
+        span: auto
+        defaultFrom: title
+        preset:
+            field: title
+            type: slug
+        type: text
