@@ -28,7 +28,15 @@
         "price_offseason_week_1": 105,
         "price_offseason_week_2": 100,
         "price_offseason_week_3": 95,
-        "price_offseason_week_4": 90
+        "price_offseason_week_4": 90,
+        "season_from_month": 6, 
+        "season_from_day": 15,
+        "season_to_month": 8, 
+        "season_to_day": 31,
+        "offseason_from_month": 9, 
+        "offseason_from_day": 1,
+        "offseason_to_month": 5, 
+        "offseason_to_day": 30
     },
     {
         "title": "Kemperis",
@@ -59,7 +67,15 @@
         "price_offseason_week_1": 105,
         "price_offseason_week_2": 100,
         "price_offseason_week_3": 95,
-        "price_offseason_week_4": 90
+        "price_offseason_week_4": 90,
+        "season_from_month": 6, 
+        "season_from_day": 15,
+        "season_to_month": 8, 
+        "season_to_day": 31,
+        "offseason_from_month": 9, 
+        "offseason_from_day": 1,
+        "offseason_to_month": 5, 
+        "offseason_to_day": 30
     },
     {
         "title": "Kemperis",
@@ -90,7 +106,15 @@
         "price_offseason_week_1": 105,
         "price_offseason_week_2": 100,
         "price_offseason_week_3": 95,
-        "price_offseason_week_4": 90
+        "price_offseason_week_4": 90,
+        "season_from_month": 6, 
+        "season_from_day": 15,
+        "season_to_month": 8, 
+        "season_to_day": 31,
+        "offseason_from_month": 9, 
+        "offseason_from_day": 1,
+        "offseason_to_month": 5, 
+        "offseason_to_day": 30
     },
     {
         "title": "Kemperis",
@@ -121,7 +145,15 @@
         "price_offseason_week_1": 105,
         "price_offseason_week_2": 100,
         "price_offseason_week_3": 95,
-        "price_offseason_week_4": 90
+        "price_offseason_week_4": 90,
+        "season_from_month": 6, 
+        "season_from_day": 15,
+        "season_to_month": 8, 
+        "season_to_day": 31,
+        "offseason_from_month": 9, 
+        "offseason_from_day": 1,
+        "offseason_to_month": 5, 
+        "offseason_to_day": 30
     },
     {
         "title": "Kemperis",
@@ -152,6 +184,14 @@
         "price_offseason_week_1": 105,
         "price_offseason_week_2": 100,
         "price_offseason_week_3": 95,
-        "price_offseason_week_4": 90
+        "price_offseason_week_4": 90,
+        "season_from_month": 6, 
+        "season_from_day": 15,
+        "season_to_month": 8, 
+        "season_to_day": 31,
+        "offseason_from_month": 9, 
+        "offseason_from_day": 1,
+        "offseason_to_month": 5, 
+        "offseason_to_day": 30
     }
 ]

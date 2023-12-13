@@ -15,6 +15,12 @@ class Product extends Model
      */
     public $timestamps = false;
 
+    public $implement = [
+        \RainLab\Translate\Behaviors\TranslatableModel::class
+    ];
+
+    public $translatable = ['title', 'description'];
+
     /**
      * @var string table in the database used by the model.
      */
@@ -47,4 +53,7 @@ class Product extends Model
 
         ];
     }
+    public $attachMany = [
+        'images' => \System\Models\File::class
+    ];
 }

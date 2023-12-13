@@ -23,3 +23,15 @@ columns:
     options:
         label: Options
         type: partial
+    season_from_month:
+        label: 'Season from month'
+        type: number
+    season_from_day:
+        label: 'Season from day '
+        type: number
+    season_to_month:
+        label: 'Season from month'
+        type: number
+    season_to_day:
+        label: 'Season from day'
+        type: number

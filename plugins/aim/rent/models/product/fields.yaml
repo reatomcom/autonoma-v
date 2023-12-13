@@ -109,6 +109,36 @@ tabs:
             span: auto
             type: number
             tab: Gearbox
+        images:
+            label: Images
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: jpg
+            span: full
+            type: fileupload
+            tab: Images
+        season_from_month:
+            label: 'SF month'
+            span: auto
+            type: text
+            tab: Season
+        season_from_day:
+            label: 'SF day'
+            span: auto
+            type: text
+            tab: Season
+        season_to_month:
+            label: 'ST month'
+            span: auto
+            type: text
+            tab: Season
+        season_to_day:
+            label: 'ST day'
+            span: auto
+            type: text
+            tab: Season
 fields:
     title:
         label: Title
