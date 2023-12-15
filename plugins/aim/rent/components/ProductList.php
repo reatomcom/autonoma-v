@@ -31,7 +31,7 @@ class ProductList extends ComponentBase
     {
         $this->page['products'] = Product::all();
         $this->page['productCount'] = $this->countProducts();
-        $this->page['images'] = \File::allFiles('/home/adrians/sites/autonoma-v/storage/app/media/');
+        $this->page['images'] = \File::allFiles(storage_path()."/app/media/"); //Change this to local directory '/home/unibit/Sites/autonoma-v/storage/app/media/'
         
         // foreach ($this->page['products'] as $product) {
         //     $seasonFromDay = Carbon::createFromFormat('d', $product->season_from_day);
