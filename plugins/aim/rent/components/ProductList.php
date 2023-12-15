@@ -2,6 +2,8 @@
 
 use Cms\Classes\ComponentBase;
 use Aim\Rent\Models\Product;
+use Request;
+
 // use Carbon\Carbon;
 
 /**
@@ -29,37 +31,80 @@ class ProductList extends ComponentBase
     
     public function onRun()
     {
-        $this->page['products'] = Product::all();
-        $this->page['productCount'] = $this->countProducts();
-        $this->page['images'] = \File::allFiles('/home/adrians/sites/autonoma-v/storage/app/media/');
-        
-        // foreach ($this->page['products'] as $product) {
-        //     $seasonFromDay = Carbon::createFromFormat('d', $product->season_from_day);
-        //     $offseason_to_day = $seasonFromDay->addDay()->format('d');
-        
-        //     // Add the offseason_to_day to the product
-        //     $product->offseason_to_day = $offseason_to_day;
+
+        $filters = ['is_active' => true];
+        $input = Request::input();
+
+        if (Request::input('has_wc', 1)) {
+            $filters['has_wc'] = 1;
+        }
+        if (Request::input('has_shower', 1)) {
+            $filters['has_shower'] = 1;
+        }
+        if (Request::input('has_kitchen', 1)) {
+            $filters['has_kitchen'] = 1;
+        }
+        if (Request::input('has_ac', 1)) {
+            $filters['has_ac'] = 1;
+        }
+        if (Request::input('has_heating', 1)) {
+            $filters['has_heating'] = 1;
+        }
+        if (Request::input('has_tv', 1)) {
+            $filters['has_tv'] = 1;
+        }
+        if (Request::input('has_bike_rack', 1)) {
+            $filters['has_bike_rack'] = 1;
+        }
+        if (Request::input('has_pets_allowed', 1)) {
+            $filters['has_pets_allowed'] = 1;
+        }
+
+        // $filters['has_toiler'] = true;
+
+        // if (ir padota cena) {
+        //     Ja ir cena tad bus cits products 
+        //     $products = Product::where($filters)
+        //         ->where('price', '>', 100) // 100 mainiigais
+        //         ->where('price', '<', 300)
+        //         ->get();
+        // } else {
+        //     Ja ne tad bus
+        //     $products = Product::where($filters)
+        //     ->get();
         // }
-        
-        // foreach ($this->page['products'] as $product) {
-        //     $seasonFromDate = Carbon::createFromFormat('d-m', $product->season_from_day . '-' . $product->season_from_month);
-        //     $offseasonFromDate = $seasonFromDate->addDay();
-        
-        //     $seasonToDate = Carbon::createFromFormat('d-m', $product->season_to_day . '-' . $product->season_to_month);
-        //     $offseasonToDate = $seasonToDate->addDay();
-        
-        //     // Add the offseason_from_day, offseason_from_month, offseason_to_day, offseason_to_month to the product
-        //     $product->offseason_from_day = $offseasonFromDate->format('d');
-        //     $product->offseason_from_month = $offseasonFromDate->format('m');
-        //     $product->offseason_to_day = $offseasonToDate->format('d');
-        //     $product->offseason_to_month = $offseasonToDate->format('m');
-        // }
+        // 
+        $products = Product::where($filters)
+            ->get();
+        $productsCount = $products->count();
+
+        $this->page['products'] = $products;
+        $this->page['productCount'] = $productsCount;
     }
-    
-    public function countProducts()
+    public function onSetFilters()
     {
-        return Product::count();
-    }
+        $filters = post('filters');
+        if (empty($filters['attr'])) {
+            $products = Product::where('title', $filters['tips'])
+            ->where('beds', $filters['beds'])
+            ->get();
+        } else {
+            $products = [];
+            foreach($filters['attr'] as $key => $attr){
+                $addProducts = Product::where('title', $filters['tips'])
+                    ->where('beds', $filters['beds'])
+                    ->where($key, '1')
+                    ->get()
+                    ->toArray();
+                $products = array_merge($products, $addProducts);
+            }
+        }
 
-
+        return [
+            '#content' => $this->renderPartial('@content',[
+                'products' => $products
+            ])
+        ];
+    }   
+    
 }
