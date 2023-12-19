@@ -2,6 +2,8 @@
 
 use October\Rain\Database\Updates\Seeder;
 use Aim\Rent\Models\Product;
+use Illuminate\Support\Facades\Storage;
+use System\Models\File;
 
 class SeedProducts extends Seeder
 {
@@ -48,6 +50,33 @@ class SeedProducts extends Seeder
             $product->price_offseason_week_2 = $data['price_offseason_week_2'];
             $product->price_offseason_week_3 = $data['price_offseason_week_3'];
             $product->price_offseason_week_4 = $data['price_offseason_week_4'];
+            // Seedojam bildes
+            $photoFolderId = isset($data['folder_id']) ? $data['folder_id'] : null;
+            if ($photoFolderId) {
+
+                // izdzesam ara vecas bildes
+                $oldFiles = File::where($product->brand = "Ford")->get(); // Where: band + id
+                if ($oldFiles->count()) {
+                    foreach ($oldFiles as $oldFile) {
+                        $oldFile->delete();
+                    }
+                }
+
+                // $products = Product::where('brand', 'Ford')->with('photos')->get();
+                // foreach ($products as $product) {
+                //     foreach ($product->files as $file) {
+                //         $file->delete();
+                //     }
+                // }
+
+                // Nolsam bildes no foldera un seedojam failus 
+                $directory = '/plugins/aim/rent/updates/data/photos/1';
+                $files = Storage::files($directory);
+
+                foreach ($files as $file) {
+                    $product->photos = (new File)->fromFile($file);
+                }
+            }
             $product->save();
         }
     }

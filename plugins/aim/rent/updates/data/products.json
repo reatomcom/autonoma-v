@@ -36,7 +36,8 @@
         "offseason_from_month": 9, 
         "offseason_from_day": 1,
         "offseason_to_month": 5, 
-        "offseason_to_day": 30
+        "offseason_to_day": 30,
+        "folder_id": 1
     },
     {
         "title": "Kemperis",
@@ -75,7 +76,8 @@
         "offseason_from_month": 9, 
         "offseason_from_day": 1,
         "offseason_to_month": 5, 
-        "offseason_to_day": 30
+        "offseason_to_day": 30,
+        "folder_id": 2
     },
     {
         "title": "Kemperis",
@@ -114,7 +116,8 @@
         "offseason_from_month": 9, 
         "offseason_from_day": 1,
         "offseason_to_month": 5, 
-        "offseason_to_day": 30
+        "offseason_to_day": 30,
+        "folder_id": 1
     },
     {
         "title": "Kemperis",
@@ -153,7 +156,8 @@
         "offseason_from_month": 9, 
         "offseason_from_day": 1,
         "offseason_to_month": 5, 
-        "offseason_to_day": 30
+        "offseason_to_day": 30,
+        "folder_id": 1
     },
     {
         "title": "Kemperis",
@@ -192,6 +196,7 @@
         "offseason_from_month": 9, 
         "offseason_from_day": 1,
         "offseason_to_month": 5, 
-        "offseason_to_day": 30
+        "offseason_to_day": 30,
+        "folder_id": 1
     }
 ]
