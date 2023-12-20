@@ -11,6 +11,7 @@
                 {{ 'Rezervēt'|_ }}
             </a>
         <div class="collapse navbar-collapse order-lg-2" id="navbarNav">
+             {# drop down menu task 1 #}
             <select class="form-control" onchange="window.location.assign(this.value)">
                 {% for site in sitePicker.sites %}
                     <option value="{{ site.url }}" {{ this.site.code == site.code ? 'selected' }}>
@@ -32,7 +33,7 @@
                 </li>
                 <!-- Menu items-->
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ ''|page }}" role="button">{{ 'Sākums'|_ }}</a>
+                    <a class="nav-link" href="{{ '/'|page }}" role="button">{{ 'Sākums'|_ }}</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ 'rent'|page }}" role="button">{{ 'Noma'|_ }}</a>

@@ -4,42 +4,37 @@
         <aside class="col-lg-4 col-xl-3 border-top-lg border-end-lg shadow-sm px-3 px-xl-4 px-xxl-5 pt-lg-2">
             <form class="offcanvas-lg offcanvas-start" id="filters-sidebar">
                 <div class="offcanvas-header d-flex d-lg-none align-items-center">
-                    <h2 class="h5 mb-0">Filters</h2>
+                    <h2 class="h5 mb-0">{{ 'Filtri'|_ }}</h2>
                     <button class="btn-close" type="button" data-bs-dismiss="offcanvas" data-bs-target="#filters-sidebar"></button>
                 </div>
                 <div class="offcanvas-body py-lg-4">
                     <div class="pb-4 mb-2">
                         <h3 class="h6">{{ 'Produkta tips'|_ }}</h3>
-                        <select name="filters[tips]" class="form-select mb-2">
-                            {# <select name="filters[category_id][abstract]" class="form-select">
-                                <option value="">- {{ 'not selected'|_ }} -</option>
-                                {% for product in products %}
-                                <option value="{{ product.title }}" {% if filters.tips == product.title %}selected{% endif %}>{{ product.title }}</option>
-                                {% endfor %}
-                            </select> #}
-                            <option value="" selected="" disabled="disabled">{{ 'Izvēlieties tipu'|_ }}</option>
-                            <option value="Masinas">{{ 'Mašīnas'|_ }}</option>
-                            <option value="Kemperis">{{ 'Kemperi' }}</option>
-                            <option value="Aksesuari">{{ 'Aksesuāri'|_ }}</option>
+                        <select name="filters[product_type]" class="form-select mb-2">
+                            {# pec default nekas nav izvelets #}
+                            <option value="" selected="">{{ '- visi -'|_ }}</option>
+                            <option value="car">{{ 'Vieglās automašīnas'|_ }}</option>
+                            <option value="camper"> {{ 'Kemperi'|_ }}</option>
+                            <option value="other">{{ 'Citi'|_ }}</option>
+                        </select>
+                    </div>
+                    <div class="pb-4 mb-2">
+                        <h3 class="h6">{{ 'Brand'|_ }}</h3>
+                        <select name="filters[brand]" class="form-select mb-2">
+                            {# By default, nothing is selected #}
+                            <option value="" selected>{{ '- select -'|_ }}</option>
+                            <option value="Ford" {% if filters.brand == 'Ford' %}selected{% endif %}>{{ 'Ford'|_ }}</option>
+                            <option value="Fiat" {% if filters.brand == 'Fiat' %}selected{% endif %}>{{ 'Fiat'|_ }}</option>
                         </select>
                     </div>
                     <div class="pb-4 mb-2">
                         <h3 class="h6 pt-1">{{ 'Gultu skaits'|_ }}</h3>
-                        <div class="btn-group btn-group-sm" role="group" aria-label="Choose number of bedrooms">
-                            <input name="filters[beds]" value="2" class="btn-check" type="radio" id="studio" name="bedrooms-2"> {# siten id janomaina visticamak uz bedrooms-2 #}
-                            <label class="btn btn-outline-secondary fw-normal" for="bedrooms-2">2</label>
-                            
-                            <input name="filters[beds]" value="3" class="btn-check" type="radio" id="bedrooms-3" name="bedrooms" checked="">
-                            <label class="btn btn-outline-secondary fw-normal" for="bedrooms-3">3</label>
-                            
-                            <input name="filters[beds]" value="4" class="btn-check" type="radio" id="bedrooms-4" name="bedrooms">
-                            <label class="btn btn-outline-secondary fw-normal" for="bedrooms-4">4</label>
-                            
-                            <input name="filters[beds]" value="5" class="btn-check" type="radio" id="bedrooms-5" name="bedrooms">
-                            <label class="btn btn-outline-secondary fw-normal" for="bedrooms-5">5</label>
-                            
-                            <input name="filters[beds]" value="6" class="btn-check" type="radio" id="bedrooms-6" name="bedrooms">
-                            <label class="btn btn-outline-secondary fw-normal" for="bedrooms-6">6+</label>
+                        <div class="dropdown">
+                            <select class="form-select mb-2" name="filters[beds]" id="bedroomsDropdown">
+                                <option value="anybed" selected="">{{ '- jebkāds -' }}</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                            </select>
                         </div>
                     </div>
                     <div class="pb-4 mb-2">
@@ -53,38 +48,36 @@
                                 <div class="simplebar-mask">
                                     <div class="simplebar-offset" style="right: 0px; bottom: 0px;">
                                         <div class="simplebar-content-wrapper" tabindex="0" role="region" aria-label="scrollable content" style="height: 100%; overflow: hidden scroll;">
-                                            {# <d iv class="simplebar-content" style="padding: 0px;"> #}
-                                                {# visi ir uztaisiti uz toaletes #}
                                             <div class="form-check">
-                                                <input name="filters[has_wc]" value="1" {% if filters.tualete ==1 %}checked{% endif %} class="form-check-input" type="checkbox" id="wc">
+                                                <input name="filters[attr][has_wc]" value="1" {% if filters.tualete ==1 %}checked{% endif %} class="form-check-input" type="checkbox" id="wc">
                                                 <label class="form-check-label fs-sm" for="wc">{{ 'Tualete'|_ }}</label>
                                             </div>
                                             <div class="form-check">
-                                                <input name="filters[has_shower]" value="1" {% if filters.tualete ==1 %}checked{% endif %} class="form-check-input" type="checkbox" id="shower">
+                                                <input name="filters[attr][has_shower]" value="1" {% if filters.shower ==1 %}checked{% endif %} class="form-check-input" type="checkbox" id="shower">
                                                 <label class="form-check-label fs-sm" for="shower">{{ 'Duša'|_ }}</label>
                                             </div>
                                             <div class="form-check">
-                                                <input name="filters[has_kitchen]" value="1" {% if filters.tualete ==1 %}checked{% endif %} class="form-check-input" type="checkbox" id="kitchen">
+                                                <input name="filters[attr][has_kitchen]" value="1" {% if filters.kitchen ==1 %}checked{% endif %} class="form-check-input" type="checkbox" id="kitchen">
                                                 <label class="form-check-label fs-sm" for="kitchen">{{ 'Virtuve'|_ }}</label>
                                             </div>
                                             <div class="form-check">
-                                                <input name="filters[has_ac]" value="1" {% if filters.tualete ==1 %}checked{% endif %} class="form-check-input" type="checkbox" id="air-condition">
+                                                <input name="filters[attr][has_ac]" value="1" {% if filters.ac ==1 %}checked{% endif %} class="form-check-input" type="checkbox" id="air-condition">
                                                 <label class="form-check-label fs-sm" for="air-condition">{{ 'Gaisa Kondicionieris'|_ }}</label>
                                             </div>
                                             <div class="form-check">
-                                                <input name="filters[has_heating]" value="1" {% if filters.tualete ==1 %}checked{% endif %} class="form-check-input" type="checkbox" id="heating">
+                                                <input name="filters[attr][has_heating]" value="1" {% if filters.heating ==1 %}checked{% endif %} class="form-check-input" type="checkbox" id="heating">
                                                 <label class="form-check-label fs-sm" for="heating">{{ 'Apkure'|_ }}</label>
                                             </div>
                                             <div class="form-check">
-                                                <input name="filters[has_tv]" value="1" {% if filters.tualete ==1 %}checked{% endif %} class="form-check-input" type="checkbox" id="tv">
+                                                <input name="filters[attr][has_tv]" value="1" {% if filters.tv ==1 %}checked{% endif %} class="form-check-input" type="checkbox" id="tv">
                                                 <label class="form-check-label fs-sm" for="tv">{{ 'TV'|_ }}</label>
                                             </div>
                                             <div class="form-check">
-                                                <input name="filters[has_bike_rack]" value="1" {% if filters.tualete ==1 %}checked{% endif %} class="form-check-input" type="checkbox" id="bike-rack">
+                                                <input name="filters[attr][has_bike_rack]" value="1" {% if filters.bike_rack ==1 %}checked{% endif %} class="form-check-input" type="checkbox" id="bike-rack">
                                                 <label class="form-check-label fs-sm" for="bike-rack">{{ 'Riteņu turētājs'|_ }}</label>
                                             </div>
                                             <div class="form-check">
-                                                <input name="filters[has_pets_allowed]" value="1" {% if filters.tualete ==1 %}checked{% endif %} class="form-check-input" type="checkbox" id="pets-allowed">
+                                                <input name="filters[attr][has_pets_allowed]" value="1" {% if filters.pets_allowed ==1 %}checked{% endif %} class="form-check-input" type="checkbox" id="pets-allowed">
                                                 <label class="form-check-label fs-sm" for="pets-allowed">{{ 'Atļauti mājdzīvnieki'|_ }}</label>
                                             </div>
                                         </div>
@@ -104,11 +97,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="border-top py-4 d-flex">
-                    <button class="btn btn-outline-primary" type="button"><i class="fi-rotate-right me-2"></i>Reset filters</button>
-                    <button class="btn btn-outline-danger" type="button" data-request="onSetFilters"><i class="fi-check me-2"></i>Set filters</button>
+                <div class="border-top py-4 d-flex w-100">
+                    <button class="d-flex btn btn-outline-primary w-50" type="button" data-request="onResetFilters"><i class="fi-rotate-right me-2"></i>{{ 'Atiestatīt filtrus'|_ }}</button>
+                    <button class="d-flex btn btn-outline-danger ms-3 w-50" type="button" data-request="onSetFilters"><i class="fi-check me-2"></i>{{ 'Iestatīt  filtrus'|_ }}</button>
                 </div>
-            
             </form>
         </aside>
         <!-- Page content-->
@@ -116,25 +108,23 @@
             <!-- Breadcrumb-->
             <nav class="mb-3 pt-md-2" aria-label="Breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{{ '/'|_ }}">Sākums</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Kemperu noma</li>
+                    <li class="breadcrumb-item"><a href="{{ '/'|_ }}">{{ 'Sākums'|_ }}</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">{{ 'Noma'|_ }}</li>
                 </ol>
             </nav>
-            <!-- Title-->
-            
             <!-- Sorting-->
             <div class="d-flex flex-sm-row flex-column align-items-sm-center align-items-stretch my-2">
                 <div class="d-flex align-items-center flex-shrink-0">
                     <label class="fs-sm me-2 pe-1 text-nowrap" for="sortby">
-                        <i class="fi-arrows-sort text-muted mt-n1 me-2"></i>Sort by:
+                        <i class="fi-arrows-sort text-muted mt-n1 me-2"></i>{{ 'Kārtot pēc:'|_ }}
                     </label>
                     <select class="form-select form-select-sm" id="sortby">
-                        <option>Jaunākais</option>
-                        <option>Popularitāte</option>
-                        <option>Zema - Augsta Cena</option>
-                        <option>Augsta - Zema Cena</option>  
-                        <option>Augsts vērtējums</option>
-                        <option>Vidējais vērtējums</option>
+                        <option>{{ 'Jaunākais'|_ }}</option>
+                        <option>{{ 'Popularitāte'|_ }}</option>
+                        <option>{{ 'Zema - Augsta Cena'|_ }}</option>
+                        <option>{{ 'Augsta - Zema Cena'|_ }}</option>  
+                        <option>{{ 'Augsts vērtējums'|_ }}</option>
+                        <option>{{ 'Vidējais vērtējums'|_ }}</option>
                     </select>
                 </div>
                 <hr class="d-none d-sm-block w-100 mx-4">
@@ -150,13 +140,3 @@
         </div>
     </div>
 </div>
-{# </div> mosk seit #}
-{# <img src='assets/img/car-finder/blog/0{{i}}.png' alt="Blog Image"> <!-- REmo ve this-->
-if
-<img src='assets/img/car-finder/blog/0{{i}}.png' alt="Blog Image"> <!-- REmo ve this--> #}
-
-
-{% put script %}
-
-
-{% endput %}

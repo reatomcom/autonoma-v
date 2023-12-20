@@ -1,7 +1,7 @@
 <?php namespace Aim\Rent\Models;
 
 use Model;
-use RainLab\Translate\Behaviors\TranslatableModel;
+
 /**
  * Model
  */
@@ -16,7 +16,7 @@ class Product extends Model
     public $timestamps = false;
 
     // public $implement = [
-    //     TranslatableModel::class
+    //     \RainLab\Translate\Behaviors\TranslatableModel::class
     // ];
 
     // public $translatable = ['title', 'description'];
@@ -31,6 +31,8 @@ class Product extends Model
      */
     public $rules = [
     ];
+
+    public $jsonable = ['videos'];
 
     /**
      *

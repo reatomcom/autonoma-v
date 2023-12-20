@@ -8,19 +8,19 @@
                 </button>
             </div>
             <div class="tns-outer" id="tns3-ow">
-                <div class="tns-controls" aria-label="Carousel Navigation" tabindex="0">
+                {# <div class="tns-controls" aria-label="Carousel Navigation" tabindex="0">
                     <button type="button" data-controls="prev" tabindex="-1" aria-controls="tns3">
                         <i class="fi-chevron-left"></i>
                     </button>
                     <button type="button" data-controls="next" tabindex="-1" aria-controls="tns3">
                         <i class="fi-chevron-right"></i>
                     </button>
-                </div>
-                <div class="tns-liveregion tns-visually-hidden" aria-live="polite" aria-atomic="true">
+                </div> #}
+                {# <div class="tns-liveregion tns-visually-hidden" aria-live="polite" aria-atomic="true">
                     slide 
                     <span class="current">3</span>  
                     of 2
-                </div>
+                </div> #}
                 {# item #}
                 <div class="tns-carousel-wrapper">
                     <div>{#<d iv class="tns-carousel-inner" data-carousel-options="{&quot;navAsThumbnails&quot;: true, &quot;navContainer&quot;: &quot;#thumbnails&quot;, &quot;gutter&quot;: 12, &quot;responsive&quot;: {&quot;0&quot;:{&quot;controls&quot;: false},&quot;500&quot;:{&quot;controls&quot;: true}}}"> #}
@@ -28,9 +28,11 @@
                         <div>
                             {% set firstImage = product.images|first %}
                             {% if firstImage %}
-                            <img class="rounded-3" src="{{ firstImage.getThumb(400, 180) }}" alt="Product Image">
+                                <img class="rounded-3" src="{{ firstImage.getThumb(400, 180) }}" alt="Product Image">
                             {% else %}
-                            <img class="rounded-3" src="/themes/re/assets/img/logo/white-logo.png" width="400" height="300" alt="Placeholder Image">
+                                <div style="height: 300px" class="rounded-3 bg-secondary d-flex align-items-center justify-content-center">
+                                    <img class="rounded-3 mx-auto d-block w-50" src="/themes/re/assets/img/logo/white-logo.png" width="400" height="300" alt="Autonoma-v">
+                                </div>
                             {% endif %}
                         </div>
                         
