@@ -65,7 +65,7 @@ class SeedProducts extends Seeder
                 }
 
                 //$directory = __DIR__.'/data/photos/'.$data['folder_id'];
-                $directory = "/home/unibit/Sites/autonoma-v/plugins/aim/rent/updates/data/photos/".$data['folder_id'];
+                $directory = __DIR__."/data/photos/".$data['folder_id'];
                 $files = glob($directory."/*");
                 echo "Dir: ".$directory."\n";
                 echo "Ammount of files found: ".count($files)."\n";
