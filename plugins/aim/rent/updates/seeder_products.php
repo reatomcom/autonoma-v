@@ -50,34 +50,31 @@ class SeedProducts extends Seeder
             $product->price_offseason_week_2 = $data['price_offseason_week_2'];
             $product->price_offseason_week_3 = $data['price_offseason_week_3'];
             $product->price_offseason_week_4 = $data['price_offseason_week_4'];
+            $product->save();
+
             // Seedojam bildes
             $photoFolderId = isset($data['folder_id']) ? $data['folder_id'] : null;
             if ($photoFolderId) {
 
                 // izdzesam ara vecas bildes
-                $oldFiles = File::where($product->brand = "Ford")->get(); // Where: band + id
+                $oldFiles = File::where(['attachment_type' => "Aim\Rent\Models\Product", 'attachment_id' => $product->id])->get(); 
                 if ($oldFiles->count()) {
                     foreach ($oldFiles as $oldFile) {
                         $oldFile->delete();
                     }
                 }
 
-                // $products = Product::where('brand', 'Ford')->with('photos')->get();
-                // foreach ($products as $product) {
-                //     foreach ($product->files as $file) {
-                //         $file->delete();
-                //     }
-                // }
-
-                // Nolsam bildes no foldera un seedojam failus 
-                $directory = '/plugins/aim/rent/updates/data/photos/1';
-                $files = Storage::files($directory);
-
+                //$directory = __DIR__.'/data/photos/'.$data['folder_id'];
+                $directory = "/home/unibit/Sites/autonoma-v/plugins/aim/rent/updates/data/photos/".$data['folder_id'];
+                $files = glob($directory."/*");
+                echo "Dir: ".$directory."\n";
+                echo "Ammount of files found: ".count($files)."\n";
                 foreach ($files as $file) {
-                    $product->photos = (new File)->fromFile($file);
+                    echo 'File: '.$file."\n";
+                    $product->images = (new File)->fromFile($file);
                 }
+                $product->save();
             }
-            $product->save();
         }
     }
 }
