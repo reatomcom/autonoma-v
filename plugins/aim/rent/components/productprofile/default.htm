@@ -34,7 +34,7 @@
                         <div class="tns-carousel-inner" data-carousel-options="{&quot;navAsThumbnails&quot;: true, &quot;navContainer&quot;: &quot;#thumbnails&quot;, &quot;gutter&quot;: 12, &quot;responsive&quot;: {&quot;0&quot;:{&quot;controls&quot;: false},&quot;500&quot;:{&quot;controls&quot;: true}}}">
                             {% for image in product.images %}
                             <div>
-                                <img class="rounded-3" src="{{ image.getThumb(800, 506.25) }}" alt="Image">
+                                <img class="rounded-3" src="{{ image.getThumb(800, 506.25, 'crop') }}" alt="Image">
                             </div>
                             {% endfor %}
                             {% for video in videos %}
@@ -48,7 +48,7 @@
                     <ul class="tns-thumbnails mb-4" id="thumbnails">
                         {% for image in product.images %}
                         <li class="tns-thumbnail">
-                            <img src="{{ image.getThumb(138, 104) }}" alt="Thumbnail">
+                            <img src="{{ image.getThumb(138, 104, 'crop') }}" alt="Thumbnail">
                         </li>
                         {% endfor %}
                         <li class="tns-thumbnail">
