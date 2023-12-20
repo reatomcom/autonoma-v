@@ -15,11 +15,11 @@ class Product extends Model
      */
     public $timestamps = false;
 
-    public $implement = [
-        \RainLab\Translate\Behaviors\TranslatableModel::class
-    ];
+    // public $implement = [
+    //     \RainLab\Translate\Behaviors\TranslatableModel::class
+    // ];
 
-    public $translatable = ['title', 'description'];
+    // public $translatable = ['title', 'description'];
 
     /**
      * @var string table in the database used by the model.
@@ -31,6 +31,8 @@ class Product extends Model
      */
     public $rules = [
     ];
+
+    public $jsonable = ['videos'];
 
     /**
      *
