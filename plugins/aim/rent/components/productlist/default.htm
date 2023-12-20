@@ -144,9 +144,9 @@
                     
                     <div>
                       {% if product.first_image_url %}
-                        <img class="rounded-3" src="{{ product.first_image_url.getThumb(400, 180) }}" alt="Product Image">
+                        <img class="rounded-3" src="{{ product.first_image_url.getThumb(400, 180, 'crop') }}" alt="Product Image">
                       {% else %}
-                        <img class="rounded-3" src="{{ asset('/autonoma-v/themes/re/assets/img/logo/white-logo.png').getThumb(400, 180) }}" alt="Placeholder Image">
+                        <img class="rounded-3" src="{{ asset('/autonoma-v/themes/re/assets/img/logo/white-logo.png').getThumb(400, 180, 'crop') }}" alt="Placeholder Image">
                       {% endif %}
                     </div>
                     
