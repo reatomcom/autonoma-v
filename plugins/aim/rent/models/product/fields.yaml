@@ -118,7 +118,24 @@ tabs:
                 extension: jpg
             span: full
             type: fileupload
-            tab: Images
+            tab: Media
+        videos:
+            label: Videos
+            prompt: 'Add new item'
+            displayMode: accordion
+            span: auto
+            type: repeater
+            tab: Media
+            form:
+                fields:
+                    url:
+                        label: url
+                        span: auto
+                        type: text
+                    title:
+                        label: Title
+                        span: auto
+                        type: text
         season_from_month:
             label: 'SF month'
             span: auto

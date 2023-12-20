@@ -30,6 +30,14 @@ class ProductProfile extends ComponentBase
     {
         $productId = $this->param('id');
         $product = Product::find($productId);
+
+        $videos = $product->videos;
+        // Ja ir Product->videos (tad loopojam)
+        // Foreach videos
+        // Pieliekam klat parametru "videoId" = ?v=SITO_VERTIBU_DABU
+
         $this->page['product'] = $product;
+        $this->page['videos'] = $videos;
+
     }
 }
