@@ -5,7 +5,7 @@
           {% if product.images[0]%}
             <img src="{{product.images[0].getThumb(450,200,'crop')}}" alt="Image">
           {% else %}
-            <img src="themes/re/assets/img/car-finder/home/placeholder.webp" style="height: 200px; width:450px;" alt="Image">
+            <img src="themes/re/assets/img/car-finder/home/placeholder.webp" style="height: 200px; width:450px; object-fit:cover;" alt="Image">
           {% endif %}
           </div>
           <div class="card-body">
