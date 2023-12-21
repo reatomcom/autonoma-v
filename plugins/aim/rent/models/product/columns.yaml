@@ -23,6 +23,9 @@ columns:
     options:
         label: Options
         type: partial
+    is_promoted:
+        label: Promoted
+        type: switch
     season_from_month:
         label: 'Season from month'
         type: number

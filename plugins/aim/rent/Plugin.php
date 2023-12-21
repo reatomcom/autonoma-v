@@ -28,7 +28,8 @@ class Plugin extends PluginBase
     {
         return [
             'Aim\Rent\Components\ProductList' => 'productList',
-            'Aim\Rent\Components\ProductProfile' => 'productProfile'
+            'Aim\Rent\Components\ProductProfile' => 'productProfile',
+            'Aim\Rent\Components\LandingCom' => 'landingCom'
         ];
     }
 

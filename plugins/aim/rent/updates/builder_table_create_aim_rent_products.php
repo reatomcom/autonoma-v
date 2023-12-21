@@ -13,6 +13,7 @@ class BuilderTableCreateAimRentProducts extends Migration
             $table->string('title')->nullable();
             $table->string('slug')->nullable();
             $table->boolean('is_active')->nullable();
+            $table->boolean('is_promoted')->nullable();
             $table->text('description')->nullable();
             $table->string('brand')->nullable();
             $table->string('model')->nullable();

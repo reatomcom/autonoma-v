@@ -37,6 +37,7 @@
         "offseason_from_day": 1,
         "offseason_to_month": 5, 
         "offseason_to_day": 30,
+        "is_promoted": false,
         "folder_id": 1
     },
     {
@@ -77,6 +78,7 @@
         "offseason_from_day": 1,
         "offseason_to_month": 5, 
         "offseason_to_day": 30,
+        "is_promoted": true,
         "folder_id": 2
     },
     {
@@ -117,6 +119,7 @@
         "offseason_from_day": 1,
         "offseason_to_month": 5, 
         "offseason_to_day": 30,
+        "is_promoted": true,
         "folder_id": 1
     },
     {
@@ -157,6 +160,7 @@
         "offseason_from_day": 1,
         "offseason_to_month": 5, 
         "offseason_to_day": 30,
+        "is_promoted": true,
         "folder_id": 1
     },
     {
@@ -197,6 +201,7 @@
         "offseason_from_day": 1,
         "offseason_to_month": 5, 
         "offseason_to_day": 30,
+        "is_promoted": false,
         "folder_id": 1
     }
 ]

@@ -1,16 +1,11 @@
-title = "Home"
-layout = "default"
 url = "/"
+layout = "default"
+title = "Home"
+
+[landingCom]
 ==
-<div class="container mt-5 mb-md-4 pt-5">
-    <nav class="mb-3 pt-md-3" aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="/">{{ 'Sākums'|_ }}</a></li>
-        </ol>
-    </nav>
-</div>
 <!-- Hero-->
-<section class="container pb-md-4 pb-lg-5">
+<section class="container pt-5 mt-5 pb-md-4 pb-lg-5">
     <body class="bg-white">
           <section class="bg-position-top-center bg-repeat-0" style="background-image: url(/themes/re/assets/img/car-finder/home/hero-bg.png); background-size: 1920px 500px;">
             <div class="container">
@@ -74,6 +69,20 @@ url = "/"
                     <p class="fs-sm text-dark opacity-70 mb-0">{{'Norādiet savas automašīnas parametrus, lai veidotu tās tirgus vērtību, balstoties uz līdzīgām automašīnām Autonoma-v platformā.'|_}}</p>
                   </div>
                 </div>
+              </div>
+            </div>
+          </section>
+          <!-- Latest Cars -->
+          <section class="container pt-sm-5 pt-4 pb-3">
+            <div class="d-sm-flex align-items-center justify-content-between mb-3 mb-sm-4 pb-2">
+              <h2 class="h3 text-dark mb-3 mb-sm-0">{{'Labākie Piedāvājumi'|_}}</h2>
+              <div class="d-flex align-items-center">
+                <a class="btn btn-link btn-dark fw-normal px-0" href="/rent">{{'Visi piedāvājumi'|_}}<i class="fi-arrow-long-right fs-sm mt-0 ps-1 ms-2"></i></a>
+              </div>
+            </div>
+            <div class="tns-carousel-wrapper tns-controls-outside-xxl tns-nav-outside tns-carousel-dark">
+              <div class="tns-carousel-inner" data-carousel-options="{&quot;items&quot;: 3, &quot;responsive&quot;: {&quot;0&quot;:{&quot;items&quot;:1, &quot;gutter&quot;: 16},&quot;500&quot;:{&quot;items&quot;:2, &quot;gutter&quot;: 18},&quot;900&quot;:{&quot;items&quot;:3, &quot;gutter&quot;: 20}, &quot;1100&quot;:{&quot;gutter&quot;: 24}}}">
+                {% component 'landingCom' %}
               </div>
             </div>
           </section>

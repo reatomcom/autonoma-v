@@ -164,6 +164,10 @@ fields:
         label: 'Is active'
         span: auto
         type: switch
+    is_promoted:
+        label: Promoted
+        span: auto
+        type: switch
     description:
         label: Description
         size: large

@@ -1,0 +1,37 @@
+{% for product in promotedProducts %}
+    <div>
+        <div class="card card-dark card-hover h-100">
+          <div class="card-img-top card-img-hover"><a class="img-overlay" href="#"></a>
+            <div class="position-absolute start-0 top-0 pt-3 ps-3"><span class="d-table badge bg-info">Used</span></div>
+            <div class="content-overlay end-0 top-0 pt-3 pe-3">
+              <button class="btn btn-icon btn-dark btn-xs text-primary rounded-circle" type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Wishlist"><i class="fi-heart"></i></button>
+            </div><img src="{{product.images[0].mode}}" alt="Image">
+          </div>
+          <div class="card-body">
+            <div class="d-flex align-items-center justify-content-between pb-1"><span class="fs-sm text-dark me-3">{{product.year}}</span>
+              <div class="form-check form-check-dark">
+                <input class="form-check-input" type="checkbox" id="compare4">
+              </div>
+            </div>
+            <h3 class="h6 mb-1"><a class="nav-link-dark" href="#">{{product.model}}</a></h3>
+            <div class="text-primary fw-bold mb-1">Price placeholder</div>
+            <div class="fs-sm text-dark opacity-70">{{product.description}}</div>
+          </div>
+          <div class="card-footer border-0 pt-0">
+            <div class="border-top border-dark pt-3">
+              <div class="row g-2">
+                <div class="col me-sm-1">
+                  <div class="bg-dark rounded text-center w-100 h-100 p-2"><i class="fi-bookmark d-block h4 text-light mb-0 mx-center"></i><span class="fs-xs text-light">{{product.brand}}</span></div>
+                </div>
+                <div class="col me-sm-1">
+                  <div class="bg-dark rounded text-center w-100 h-100 p-2"><i class="fi-gearbox d-block h4 text-light mb-0 mx-center"></i><span class="fs-xs text-light">{{product.gearbox_type}}</span></div>
+                </div>
+                <div class="col">
+                  <div class="bg-dark rounded text-center w-100 h-100 p-2"><i class="fi-petrol d-block h4 text-light mb-0 mx-center"></i><span class="fs-xs text-light">{{product.engine_type}}</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
+{% endfor %}

@@ -50,6 +50,7 @@ class SeedProducts extends Seeder
             $product->price_offseason_week_2 = $data['price_offseason_week_2'];
             $product->price_offseason_week_3 = $data['price_offseason_week_3'];
             $product->price_offseason_week_4 = $data['price_offseason_week_4'];
+            $product->is_promoted = $data['is_promoted'];
             $product->save();
 
             //Seed images
