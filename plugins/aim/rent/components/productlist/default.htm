@@ -143,8 +143,8 @@
                    <div>{#<div class="tns-carousel-inner" data-carousel-options="{&quot;navAsThumbnails&quot;: true, &quot;navContainer&quot;: &quot;#thumbnails&quot;, &quot;gutter&quot;: 12, &quot;responsive&quot;: {&quot;0&quot;:{&quot;controls&quot;: false},&quot;500&quot;:{&quot;controls&quot;: true}}}"> #}
                     
                     <div>
-                      {% if product.first_image_url %}
-                        <img class="rounded-3" src="{{ product.first_image_url.getThumb(400, 180, 'crop') }}" alt="Product Image">
+                      {% if product.images[0]%}
+                        <img class="rounded-3" src="{{ product.images[0].getThumb(400, 180, 'crop') }}" alt="Product Image">
                       {% else %}
                         <img class="rounded-3" src="{{ asset('/autonoma-v/themes/re/assets/img/logo/white-logo.png').getThumb(400, 180, 'crop') }}" alt="Placeholder Image">
                       {% endif %}
