@@ -156,6 +156,26 @@ tabs:
             span: auto
             type: text
             tab: Season
+        offseason_from_month:
+            label: 'OSF month'
+            span: auto
+            type: text
+            tab: Season
+        offseason_from_day:
+            label: 'OSF day'
+            span: auto
+            type: text
+            tab: Season
+        offseason_to_month:
+            label: 'OST month'
+            span: auto
+            type: text
+            tab: Season
+        offseason_to_day:
+            label: 'OST day'
+            span: auto
+            type: text
+            tab: Season
 fields:
     title:
         label: Title

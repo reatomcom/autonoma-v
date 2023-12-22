@@ -19,19 +19,32 @@
                         </select>
                     </div>
                     <div class="pb-4 mb-2">
-                        <h3 class="h6">{{ 'Brand'|_ }}</h3>
+                        <h3 class="h6">{{ 'Marka'|_ }}</h3>
                         <select name="filters[brand]" class="form-select mb-2">
                             {# By default, nothing is selected #}
-                            <option value="" selected>{{ '- select -'|_ }}</option>
+                            <option value="" selected>{{ '- visi -'|_ }}</option>
                             <option value="Ford" {% if filters.brand == 'Ford' %}selected{% endif %}>{{ 'Ford'|_ }}</option>
                             <option value="Fiat" {% if filters.brand == 'Fiat' %}selected{% endif %}>{{ 'Fiat'|_ }}</option>
                         </select>
                     </div>
                     <div class="pb-4 mb-2">
+                        <h3 class="h6">{{ 'Cena'|_ }}</h3>
+                        <div class="d-flex justify-content-between">
+                            <div class="me-2">
+                                <label for="priceFrom" class="form-label">{{ 'No'|_ }}</label>
+                                <input type="number" class="form-control" name="filters[price][from]" id="priceFrom" value="{{ filters.price.from }}">
+                            </div>
+                            <div>
+                                <label for="priceTo" class="form-label">{{ 'Līdz'|_ }}</label>
+                                <input type="number" class="form-control" name="filters[price][to]" id="priceTo" value="{{ filters.price.to }}">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pb-4 mb-2">
                         <h3 class="h6 pt-1">{{ 'Gultu skaits'|_ }}</h3>
                         <div class="dropdown">
                             <select class="form-select mb-2" name="filters[beds]" id="bedroomsDropdown">
-                                <option value="anybed" selected="">{{ '- jebkāds -' }}</option>
+                                <option value="" selected="">{{ '- jebkāds -'|_ }}</option>
                                 <option value="6">6</option>
                                 <option value="7">7</option>
                             </select>

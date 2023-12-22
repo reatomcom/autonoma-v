@@ -22,9 +22,11 @@ class SeedProducts extends Seeder
             // Seed data
             $product = new Product;
             $product->title = $data['title'];
+            $product->product_type = $data['product_type'];
             $product->brand = $data['brand'];
             $product->model = $data['model'];
             $product->year = $data['year'];
+
             $product->beds = $data['beds'];
             $product->description = $data['description'];
             $product->engine_type = $data['engine_type'];
@@ -32,6 +34,7 @@ class SeedProducts extends Seeder
             $product->engine_size = $data['engine_size'];
             $product->gearbox_type = $data['gearbox_type'];
             $product->gearbox_shifts = $data['gearbox_shifts'];
+
             $product->has_wc = $data['has_wc'];
             $product->has_shower = $data['has_shower'];
             $product->has_kitchen = $data['has_kitchen'];
@@ -40,6 +43,7 @@ class SeedProducts extends Seeder
             $product->has_ac = $data['has_ac'];
             $product->has_bike_rack = $data['has_bike_rack'];
             $product->has_pets_allowed = $data['has_pets_allowed'];
+
             $product->price_season_week_1 = $data['price_season_week_1'];
             $product->price_season_week_2 = $data['price_season_week_2'];
             $product->price_season_week_3 = $data['price_season_week_3'];
@@ -48,6 +52,17 @@ class SeedProducts extends Seeder
             $product->price_offseason_week_2 = $data['price_offseason_week_2'];
             $product->price_offseason_week_3 = $data['price_offseason_week_3'];
             $product->price_offseason_week_4 = $data['price_offseason_week_4'];
+            $product->price_offseason_week_4 = $data['price_offseason_week_4'];
+            
+            $product->season_from_month = $data['season_from_month'];
+            $product->season_from_day = $data['season_from_day'];  
+            $product->season_to_month = $data['season_to_month'];
+            $product->season_to_day = $data['season_to_day']; 
+            $product->offseason_from_month = $data['offseason_from_month'];
+            $product->offseason_from_day = $data['offseason_from_day'];
+            $product->offseason_to_month = $data['offseason_to_month'];
+            $product->offseason_to_day = $data['offseason_to_day'];    
+
             $product->save();
         }
     }

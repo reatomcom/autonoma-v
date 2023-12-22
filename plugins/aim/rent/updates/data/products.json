@@ -1,6 +1,7 @@
 [
     {
         "title": "Kemperis",
+        "product_type": "camper",
         "brand": "Fiat",
         "model": "Dynamic 39",
         "year": 2021,
@@ -40,6 +41,7 @@
     },
     {
         "title": "Kemperis",
+        "product_type": "camper",
         "brand": "Ford",
         "model": "Transit Nobel ART",
         "year": 2021,
@@ -79,6 +81,7 @@
     },
     {
         "title": "Kemperis",
+        "product_type": "camper",
         "brand": "Fiat",
         "model": "Dynamic 39",
         "year": 2020,
@@ -118,6 +121,7 @@
     },
     {
         "title": "Kemperis",
+        "product_type": "camper",
         "brand": "Fiat",
         "model": "Dynamic 39",
         "year": 2019,
@@ -157,6 +161,7 @@
     },
     {
         "title": "Kemperis",
+        "product_type": "camper",
         "brand": "Fiat",
         "model": "Dynamic 39",
         "year": 2018,
@@ -164,7 +169,7 @@
         "is_active": true,
         "description": "Ietilpīgs un ērts kemperis ar visām ērtībām",
         "slug": "kemperis",
-        "engine_type": "Diesel",
+        "engine_type": "diesel",
         "engine_power": "150",
         "engine_size": "2.3",
         "gearbox_type": "Manual",
