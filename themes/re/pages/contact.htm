@@ -11,64 +11,63 @@ url = "/contact"
     </nav>
 </div>
 <!-- Hero-->
-<section class="container mb-5 pb-2 pb-md-4 pb-lg-5">
-    <div class="row align-items-md-start align-items-center gy-4">
-        <div class="col-lg-5 col-md-6">
-            <h1 class="mb-4">{{ 'Sazinies ar mums'|_ }}</h1>
-            <p class="mb-0 fs-lg text-muted">{{ 'Labprāt atbildēsim uz jums interesējošiem jautājumiem un esam gatavi palīdzēt ar jūsu nomu.'|_ }}</p>
-            
-            <div>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1088.5117505964547!2d24.19229!3d56.931264!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eecdfe15cfb203%3A0x7495d92c7532970c!2zTHVixIFuYXMgaWVsYSA3MCwgTGF0Z2FsZXMgcHJpZWvFoXBpbHPEk3RhLCBSxKtnYSwgTFYtMTA3MywgTGF0dmlh!5e0!3m2!1sen!2sus!4v1686296902822!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
-        <div class="col-md-6 offset-lg-1">
-            <div class="card border-0 bg-secondary p-sm-3 p-2">
-                <div class="card-body m-1">
-                    <form class="needs-validation" novalidate>
-                        <div class="mb-4">
-                            <label class="form-label" for="c-name">Full Name</label>
-                            <input class="form-control form-control-lg" id="c-name" type="text" required>
-                            <div class="invalid-tooltip mt-1">Please, enter your name</div>
+<section class="container mb-0 pb-2 pb-md-4 pb-lg-5">
+    <div class="row align-items-md-start align-items-center gy-4 mx-3">
+        <div class="col">
+            <div class="border-0 rounded-3 p-sm-3 p-2">
+                <div class="m-1">
+                    <div class="mx-2 mb-4 row">
+                        <h1 class="mb-4">{{ 'Sazinies ar mums'|_}}</h1>
+                        <p class="mb-4 fs-lg text-muted">{{'Labprāt atbildēsim uz jums interesējošiem jautājumiem un esam gatavi palīdzēt ar jūsu nomu.'|_}}</p>
+                    </div>
+
+                    <div class="row mt-5 mx-1">
+                        <div class="col-1 icon-box-media text-danger rounded-circle shadow-sm">
+                            <a href="tel:+37129233761" aria-label="{{'Zvaniet mums! +37129233761'|_}}">
+                                <i class="fi-device-mobile"></i>
+                            </a>
                         </div>
-                        <div class="mb-4">
-                            <label class="form-label" for="c-email">Your Email</label>
-                            <input class="form-control form-control-lg" id="c-email" type="email" required>
-                            <div class="invalid-tooltip mt-1">Please, enter your email</div>
+                        <address class="col">
+                            <p>
+                                <strong>{{'Tālrunis'|_}}</strong><br>
+                                <a href="tel:+37129233761" class="text-muted text-nowrap text-decoration-none">(+371) 29 233 761</a>
+                            </p>
+                        </address> 
+                    </div>
+
+                    <div class="row mt-1 mx-1">
+                        <div class="col-1 icon-box-media text-danger rounded-circle shadow-sm">
+                            <a href="mailto:info@autonoma-v.lv" aria-label="{{'Atsūtiet mums E-Pastu info@autonoma.lv!'|_}}">
+                                <i class="fi-mail"></i>
+                            </a>
                         </div>
-                        <div class="mb-4">
-                            <label class="form-label" for="c-message">Message</label>
-                            <textarea class="form-control form-control-lg" id="c-message" rows="4" placeholder="Leave your message" required></textarea>
-                            <div class="invalid-tooltip mt-1">Please, type your message</div>
+                        <address class="col">
+                            <p>
+                                <strong>{{'E-pasts'|_}}</strong><br>
+                                <a href="mailto:info@autonoma-v.lv" class="text-muted text-nowrap text-decoration-none">info@autonoma-v.lv</a>
+                            </p>
+                        </address>
+                    </div>
+
+                    <div class="row mt-1 mx-1">
+                        <div class="col-1 icon-box-media text-danger rounded-circle shadow-sm">
+                            <a href="https://www.google.com/maps?ll=56.931066,24.192203&z=17&t=m&hl=en&gl=US&mapclient=embed&q=Lub%C4%81nas+iela+70+Latgales+priek%C5%A1pils%C4%93ta,+R%C4%ABga,+LV-1073+Latvia">
+                                <i class="fi-map"></i>
+                            </a>
                         </div>
-                        <div class="pt-sm-2 pt-1">
-                            <button class="btn btn-lg btn-primary w-sm-auto w-100" type="submit">Submit form</button>
-                        </div>
-                    </form>
+                        <address class="col">
+                            <p>
+                                <strong>SIA ,,AUTO NOMA V”</strong><br>
+                                {{ 'Reģistrācijas nr.'|_}}: <a href="#" class="text-muted text-nowrap text-decoration-none">40003846486</a><br>
+                                {{ 'Juridiskā adrese'|_}}: <a href="#" class="text-muted text-nowrap text-decoration-none">Salacas iela 21-108, Rīga.</a>
+                            </p>
+                        </address>
+                    </div>
                 </div>
             </div>
+        </div>
+        <div class="col-lg-6 mt-6 embed-responsive">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1088.5117505964547!2d24.19229!3d56.931264!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eecdfe15cfb203%3A0x7495d92c7532970c!2zTHVixIFuYXMgaWVsYSA3MCwgTGF0Z2FsZXMgcHJpZWvFoXBpbHPEk3RhLCBSxKtnYSwgTFYtMTA3MywgTGF0dmlh!5e0!3m2!1sen!2sus!4v1686296902822!5m2!1sen!2sus" class="shadow embed-responsive-item" width="100%" height="453" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
 </section>
-<!-- Contact cards-->
-<section class="container mb-5 pb-2 pb-md-4 pb-lg-5">
-    <div class="row g-4">
-        <!-- Item-->
-        <div class="col-md-4"><a class="icon-box card card-hover h-100" href="mailto:info@autonoma-v.lv">
-            <div class="card-body">
-                <div class="icon-box-media text-primary rounded-circle shadow-sm mb-3"><i class="fi-mail"></i></div><span class="d-block mb-1 text-body">Drop us a line</span>
-                <h3 class="h4 icon-box-title mb-0 opacity-90">info@autonoma-v.lv</h3>
-            </div></a></div>
-            <!-- Item-->
-            <div class="col-md-4"><a class="icon-box card card-hover h-100" href="tel:+37129233761">
-                <div class="card-body">
-                    <div class="icon-box-media text-primary rounded-circle shadow-sm mb-3"><i class="fi-device-mobile"></i></div><span class="d-block mb-1 text-body">Call us any time</span>
-                    <h3 class="h4 icon-box-title mb-0 opacity-90">(+371) 29 233 761</h3>
-                </div></a></div>
-                <!-- Item-->
-                <div class="col-md-4"><a class="icon-box card card-hover h-100" href="#">
-                    <div class="card-body">
-                        <div class="icon-box-media text-primary rounded-circle shadow-sm mb-3"><i class="fi-facebook"></i></div><span class="d-block mb-1 text-body">Follow us</span>
-                        <h3 class="h4 icon-box-title mb-0 opacity-90">@autonoma.lv</h3>
-                    </div></a></div>
-                </div>
-            </section>

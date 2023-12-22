@@ -33,6 +33,7 @@ class ProductList extends ComponentBase
     public function onRun()
     {
 
+
         $filters = ['is_active' => true];
         // $input = Request::input();
 
