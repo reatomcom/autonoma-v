@@ -173,7 +173,7 @@
         "is_active": true,
         "description": "Ietilpīgs un ērts kemperis ar visām ērtībām",
         "slug": "kemperis",
-        "engine_type": "diesel",
+        "engine_type": "Diesel",
         "engine_power": "150",
         "engine_size": "2.3",
         "gearbox_type": "Manual",
