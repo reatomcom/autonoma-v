@@ -2,59 +2,75 @@ title = "Delivery"
 layout = "default"
 url = "/delivery"
 ==
-
-<div class="container mt-5 mb-5">
+<head>
+    <link rel="stylesheet" href="/themes/re/assets/vendor/tabler/webfont/tabler-icons.min.css">
+</head>
+<div class="container mt-5 mb-0">
     <!-- Standarta Piegāde -->
-    <h1 class="pt-5 mt-5 mb-3 pb-0 text-center">Piegāde</h1>
-    <div class="row mt-3">
-        <div class="col border border-muted mx-3 pt-5 rounded-3">
-            <i class="fi-list d-block mx-auto mt-2 mb-4 lead text-primary text-center" style="font-size:64px;"></i>
-            <h2 class="h5 fw-normal text-center py-1 mb-0">Standarta Piegāde</h2>
+    <h1 class="pt-5 mt-5 mb-5 pb-0 text-center">{{'Piegāde'|_}}</h1>
+    <div class="row mt-5">
+        <div class="col border border-muted mx-3 mt-5 pt-5 rounded-2">
+            <i class="ti ti-truck-delivery d-block mx-auto mt-2 mb-4 lead text-primary text-center" style="font-size:64px;"></i>
+            <h2 class="h5 fw-normal text-center py-1 mb-0">{{'Standarta Piegāde'|_}}</h2>
             <div class="d-flex align-items-end justify-content-center mb-4">
-            <div class="h1 mb-0">$50</div>
+            <div class="h1 mb-0">{{'Brīvs'|_}}</div>
             </div>
             <p class="text-center">
-                Alternatīvi, klientam ir iespēja izmantot standarta bezmaksas piegādi, izmantojot lidostas "Rīga" teritoriju. Tas var būt ērts risinājums tiem, kuri vēlas saņemt vai nodot automašīnu tieši lidostas tuvumā.
+                {{'Alternatīvi, klientam ir iespēja izmantot standarta piegādi, izmantojot lidostas "Rīga" teritoriju. Tas var būt ērts risinājums tiem, kuri vēlas saņemt vai nodot automašīnu tieši lidostas tuvumā.'|_}}'
+                <ul>
+                    <li>{{'Piegāde uz lidostas "Rīga" teritoriju.'|_}}</li>
+                </ul>
             </p>
             <div class="col py-2 border-0">
                 <div class="border-top text-center pt-4 pb-3">
-                <a href="#" class="btn btn-outline-primary rounded-pill">Choose plan</a>
+                <a href="#" class="btn btn-outline-primary rounded-pill">{{'Izvēlēties'|_}}</a>
                 </div>
             </div>
         </div>
         
         <!-- Bezmaksas Saņemšana -->
-        <div class="col shadow mx-3 pt-5 rounded-3">
-            <i class="fi-shopping-bag d-block mx-auto mt-2 mb-4 lead text-primary text-center" style="font-size:64px;"></i>
-            <h2 class="h5 fw-normal text-center py-1 mb-0">Bezmaksas Saņemšana</h2> 
+        <div class="col shadow mx-3 mt-5 pt-5 rounded-2">
+            <i class="ti ti-camper d-block mx-auto mt-2 mb-4 lead text-primary text-center" style="font-size:64px;"></i>
+            <h2 class="h5 fw-normal text-center py-1 mb-0">{{'Bezmaksas Saņemšana'|_}}</h2> 
             <div class="d-flex align-items-end justify-content-center mb-4">
-            <div class="h1 mb-0">$0</div>
+            <div class="h1 mb-0">{{'Brīvs'|_}}</div>
             </div>
             <p class="text-center">
-                Automašīnas piegāde uz lidostu "Rīga" ir bez maksas, ja klient izvēlas saņemt vai nodošanu Lubānas ielā 70, Rīgā. Tas nodrošina ērtu un bezmaksas risinājumu klientam.
+                {{'Automašīnas piegāde uz lidostu "Rīga" ir bez maksas, ja klient izvēlas saņemt vai nodošanu Lubānas ielā 70, Rīgā. Tas nodrošina ērtu un bezmaksas risinājumu klientam.'|_}}
+                <ul>
+                    <li>{{'Bezmaksas piegāde uz lidostu "Rīga".'|_}}</li>
+                </ul>
             </p>
             <div class="col py-2 border-0">
                 <div class="border-top text-center pt-4 pb-3">
-                <a href="#" class="btn btn-primary rounded-pill">Choose plan</a>
+                <a href="#" class="btn btn-primary rounded-pill">{{'Izvēlēties'|_}}</a>
                 </div>
             </div>
         </div>
 
         <!-- Papildus Maksas Piegāde -->
-        <div class="col border border-muted mx-3 pt-5 rounded-3">
-            <i class="fi-x d-block mx-auto mt-2 mb-4 lead text-primary text-center" style="font-size:40px;"></i>
-            <h2 class="h5 fw-normal text-center py-1 mb-0">Papildus Maksas Piegāde</h2>
+        <div class="col border border-muted mx-3 mt-5 pt-5 rounded-2">
+            <i class="ti ti-map-pin-plus d-block mx-auto mt-2 mb-4 lead text-primary text-center" style="font-size:64px;"></i>
+            <h2 class="h5 fw-normal text-center py-1 mb-0">{{'Papildus Maksas Piegāde'|_}}</h2>
             <div class="d-flex align-items-end justify-content-center mb-4">
             <div class="h1 mb-0">$100</div>
             </div>
             <p class="text-center">
-                Ja klientam ir vajadzīga īpaša vai ārkārtas piegāde, viņam ir iespēja vienoties par papildu maksu. Šis variants atbilst klienta īpašajām prasībām vai nepieciešamībai saņemt vai nodošanu citā vietā, kas nav iekļauta standarta piedāvājumā.
+                {{'Ja klientam ir vajadzīga īpaša vai ārkārtas piegāde, viņam ir iespēja vienoties par papildu maksu. Šis variants atbilst klienta īpašajām prasībām vai nepieciešamībai saņemt vai nodošanu citā vietā, kas nav iekļauta standarta piedāvājumā.'|_}}
+                <ul>
+                    <li>{{'Pēc klienta izvēles.'|_}}</li>
+                </ul>
             </p>
+            
             <div class="col py-2 border-0">
                 <div class="border-top text-center pt-4 pb-3">
-                <a href="#" class="btn btn-outline-primary rounded-pill">Choose plan</a>
+                <a href="#" class="btn btn-outline-primary rounded-pill">{{'Izvēlēties'|_}}</a>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="row mt-5 bg-primary p-3 px-5">
+        <h4 class="text-center text-light">Izvēleties savu kemperi šodien!</h4>
+        <button class="btn btn-outline-light btn-lg text-light">Dabūt savas atslēgas uz pasauli!</button>
     </div>
 </div>
