@@ -1,6 +1,8 @@
 <script src="https://kit.fontawesome.com/297372d108.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta17/dist/js/tabler.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+</head>
 
 <!-- Page content-->
 <section class="container mt-5 mb-lg-5 mb-4 pt-5 pb-lg-5">
@@ -102,7 +104,7 @@
                                         <th scope="col"></th>
                                         <th scope="col">
                                             <div>
-                                                <i class="fa-solid fa-sun mt-n1 me-2 fs-lg align-middle"></i>{{ 'Sezonā'|_ }}
+                                                <i class="ti ti-sun-high"></i>{{ ' Sezonā'|_ }}
                                             </div>
                                             <small class="small text-muted fw-normal pt-0">
                                                 {{ "%02d"|format(product.season_from_day) ~ '.' 
@@ -113,7 +115,7 @@
                                         </th>
                                         <th scope="col">
                                             <div>
-                                                <i class="fa-solid fa-snowflake mt-n1 me-2 fs-lg align-middle"></i>{{ 'Nesezonā'|_ }}
+                                                <i class="ti ti-snowflake"></i>{{ ' Nesezonā'|_ }}
                                             </div>
                                             <small class="small text-muted fw-normal pt-0">
                                                 {{ "%02d"|format(product.offseason_from_day) ~ '.' 
@@ -156,31 +158,31 @@
                         <h5>{{ 'Ērtības'|_ }}</h5>
                         <ul class="list-unstyled row row-cols-md-2 row-cols-1 gy-2 mb-0 text-nowrap">
                             {% if product.has_wc == 1 %}
-                            <li class="col"><i class="fa-solid fa-toilet mt-n1 me-2 fs-lg align-middle"></i>{{ 'Tualete'|_ }}</li>
+                            <li class="col"><i class="ti ti-toilet-paper"></i>{{ ' Tualete'|_ }}</li>
                             {% endif %}
                             {% if product.has_shower == 1 %}
-                            <li class="col"><i class="fa-solid fa-shower mt-n1 me-2 fs-lg align-middle"></i>{{ 'Duša'|_ }}</li>
+                            <li class="col"><i class="ti ti-bath"></i>{{ ' Duša'|_ }}</li>
                             {% endif %}
                             {% if product.has_kitchen == 1 %}
-                            <li class="col"><i class="fa-solid fa-fire-burner mt-n1 me-2 fs-lg align-middle"></i>{{ 'Virtuve'|_ }}</li>
+                            <li class="col"><i class="ti ti-tools-kitchen-2"></i>{{ ' Virtuve'|_ }}</li>
                             {% endif %}
                             {% if product.has_ac == 1 %}
-                            <li class="col"><i class="fa-solid fa-fan mt-n1 me-2 fs-lg align-middle"></i>{{ 'Gaisa kondicionieris'|_ }}</li>
+                            <li class="col"><i class="ti ti-propeller"></i>{{ ' Gaisa kondicionieris'|_ }}</li>
                             {% endif %}
                             {% if product.has_tv == 1 %}
-                            <li class="col"><i class="fa-solid fa-tv mt-n1 me-2 fs-lg align-middle"></i>{{ 'TV'|_ }}</li>
+                            <li class="col"><i class="ti ti-device-tv"></i>{{ ' TV'|_ }}</li>
                             {% endif %}
                             {% if product.has_bike_rack == 1 %}
-                            <li class="col"><i class="fa-solid fa-bicycle mt-n1 me-2 fs-lg align-middle"></i>{{ 'Velosipēdu turētājs'|_ }}</li>
+                            <li class="col"><i class="ti ti-bike"></i>{{ ' Velosipēdu turētājs'|_ }}</li>
                             {% endif %}
                             {% if product.has_pets_allowed == 1 %}
-                            <li class="col"><i class="fa-solid fa-dog mt-n1 me-2 fs-lg align-middle"></i>{{ 'Atļauti mājdzīvnieki'|_ }}</li>
+                            <li class="col"><i class="ti ti-paw"></i>{{ ' Atļauti mājdzīvnieki'|_ }}</li>
                             {% endif %}
                             {% if product.has_heating == 1 %}
-                            <li class="col"><i class="fa-solid fa-fire mt-n1 me-2 fs-lg align-middle"></i>{{ 'Apkure'|_ }}</li>
+                            <li class="col"><i class="ti ti-flame"></i>{{ ' Apkure'|_ }}</li>
                             {% endif %}
                             {% if product.beds > 0 %}
-                            <li class="mt-2 mb-0"><i class="fa-solid fa-bed mt-n1 me-2 fs-lg align-middle"></i>{{product.beds}} {{ 'Gultas'|_ }}</li>
+                            <li class="mt-2 mb-0"><i class="ti ti-bed"></i>{{' ' ~ product.beds}} {{ ' Gultas'|_ }}</li>
                             {% endif %}
                             
                         </ul>

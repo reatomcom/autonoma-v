@@ -86,29 +86,76 @@ class ProductList extends ComponentBase
     }
     public function onSetFilters()
     {
-        $filters = post('filters'); //izveido post no filters ko izmanto lai store'otu values
+        // $filters = post('filters'); //izveido post no filters ko izmanto lai store'otu values
 
         $rules = [
-            'tips' => 'required|in:Kemperis,Masinas,Aksesuari', //parliecinas par to ka tips ir izvelets ka viena no šim opcijam
+            'product_type' => 'required|in:car,camper,other', //parliecinas par to ka tips ir izvelets ka viena no šim opcijam
         ];
 
-        $validator = Validator::make($filters, $rules); //izveido validatoru kas parbauda filters ar noteikumiem 'rules'
+        $validator = Validator::make(post('filters'), $rules); //izveido validatoru kas parbauda filters ar noteikumiem 'rules'
         
         if ($validator->fails()) { //ja validators netiek izpildits
             foreach ($validator->messages()->all(':message') as $message) {
-                return true;
+                // return 
             } 
         }
 
-        $filters = ['is_active' => true];
+        $filters = post('filters');
 
-        // $productType = post('filters.product_type');
-        // if ($productType && $productType != "") { $filters['product_type'] = $productType; } 
+        $productType = post('filters.product_type');
         $productBrand = post('filters.brand');
-        if ($productBrand && $productBrand != "") { $filters['brand'] = $productBrand; } 
+        $productBrand = post('filters.brand');
+        $productBeds = post('filters.beds');
+        $attr = post('filters.attr');
+        $priceFrom = input('filters.price.from');
+        $priceTo = input('filters.price.to');
 
-        $products = Product::where($filters)->get();
+        $query = Product::where('is_active', true);
+
+
+        // Make foreach for filters
+        $filterKeys = ["product_type", "brand", "beds"];
+        foreach ($filterKeys as $key) {
+            if (isset($filters[$key]) && $filters[$key] !== '') {
+                $query->where($key, $filters[$key]);
+            }
+        }
+        // if ($productType && $productType != "") 
+        // { 
+        //     $filters['product_type'] = $productType; 
+        // } 
+
         
+        // if ($productBrand && $productBrand != "") { 
+        //     $filters['brand'] = $productBrand; 
+        // }
+
+        // if ($productBeds && $productBeds != "") { 
+        //     $filters['beds'] = $productBeds; 
+        // }
+        
+        if (is_array($filters) || is_object($filters)) { 
+            foreach ($filters as $key => $value) {
+                if ($value == 1) {
+                    $query->where($key, $value);
+                }
+            }
+        }
+        
+        if (!empty($priceFrom)) {
+            $query->where('price_offseason_week_4', '>=', $priceFrom);
+        }
+        
+        if (!empty($priceTo)) {
+            $query->where('price_offseason_week_4', '<=', $priceTo);
+        }
+
+        $products = $query->get();
+        //$products = Product::where($filters)->get();
+
+        // where('brand',$filters['brand'])
+        
+        //product where products[]
 
         // if (empty($filters['attr'])) { //ja amenities nav izvēlēts nekas
         //     $query = Product::query();

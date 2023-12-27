@@ -1,6 +1,7 @@
 [
     {
         "title": "Kemperis",
+        "product_type": "camper",
         "brand": "Fiat",
         "model": "Dynamic 39",
         "year": 2021,
@@ -41,6 +42,7 @@
     },
     {
         "title": "Kemperis",
+        "product_type": "camper",
         "brand": "Ford",
         "model": "Transit Nobel ART",
         "year": 2021,
@@ -81,6 +83,7 @@
     },
     {
         "title": "Kemperis",
+        "product_type": "camper",
         "brand": "Fiat",
         "model": "Dynamic 39",
         "year": 2020,
@@ -121,6 +124,7 @@
     },
     {
         "title": "Kemperis",
+        "product_type": "camper",
         "brand": "Fiat",
         "model": "Dynamic 39",
         "year": 2019,
@@ -161,6 +165,7 @@
     },
     {
         "title": "Kemperis",
+        "product_type": "camper",
         "brand": "Fiat",
         "model": "Dynamic 39",
         "year": 2018,

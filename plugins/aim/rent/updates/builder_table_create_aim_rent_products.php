@@ -12,6 +12,7 @@ class BuilderTableCreateAimRentProducts extends Migration
             $table->increments('id')->unsigned();
                         
             $table->string('title')->nullable();
+            $table->string('product_type')->nullable();
             $table->string('slug')->nullable();
             $table->text('description')->nullable();
             
