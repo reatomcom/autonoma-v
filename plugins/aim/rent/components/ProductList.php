@@ -100,31 +100,39 @@ class ProductList extends ComponentBase
             } 
         }
 
-        $filters = ['is_active' => true];
+        $filters = post('filters');
 
         $productType = post('filters.product_type');
         $productBrand = post('filters.brand');
         $productBrand = post('filters.brand');
         $productBeds = post('filters.beds');
-        $filters = post('filters.attr');
+        $attr = post('filters.attr');
         $priceFrom = input('filters.price.from');
         $priceTo = input('filters.price.to');
 
-        $query = Product::query();
+        $query = Product::where('is_active', true);
 
-        if ($productType && $productType != "") 
-        { 
-            $filters['product_type'] = $productType; 
-        } 
+
+        // Make foreach for filters
+        $filterKeys = ["product_type", "brand", "beds"];
+        foreach ($filterKeys as $key) {
+            if (isset($filters[$key]) && $filters[$key] !== '') {
+                $query->where($key, $filters[$key]);
+            }
+        }
+        // if ($productType && $productType != "") 
+        // { 
+        //     $filters['product_type'] = $productType; 
+        // } 
 
         
-        if ($productBrand && $productBrand != "") { 
-            $filters['brand'] = $productBrand; 
-        }
+        // if ($productBrand && $productBrand != "") { 
+        //     $filters['brand'] = $productBrand; 
+        // }
 
-        if ($productBeds && $productBeds != "") { 
-            $filters['beds'] = $productBeds; 
-        }
+        // if ($productBeds && $productBeds != "") { 
+        //     $filters['beds'] = $productBeds; 
+        // }
         
         if (is_array($filters) || is_object($filters)) { 
             foreach ($filters as $key => $value) {

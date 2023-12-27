@@ -1,3 +1,6 @@
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+</head>
 <div class="row g-4 py-4">
     {% for product in products %}
     <div class="col-sm-6 col-xl-4">
@@ -8,23 +11,9 @@
                 </button>
             </div>
             <div class="tns-outer" id="tns3-ow">
-                {# <div class="tns-controls" aria-label="Carousel Navigation" tabindex="0">
-                    <button type="button" data-controls="prev" tabindex="-1" aria-controls="tns3">
-                        <i class="fi-chevron-left"></i>
-                    </button>
-                    <button type="button" data-controls="next" tabindex="-1" aria-controls="tns3">
-                        <i class="fi-chevron-right"></i>
-                    </button>
-                </div> #}
-                {# <div class="tns-liveregion tns-visually-hidden" aria-live="polite" aria-atomic="true">
-                    slide 
-                    <span class="current">3</span>  
-                    of 2
-                </div> #}
-                {# item #}
+                {# Item #}
                 <div class="tns-carousel-wrapper">
-                    <div>{#<d iv class="tns-carousel-inner" data-carousel-options="{&quot;navAsThumbnails&quot;: true, &quot;navContainer&quot;: &quot;#thumbnails&quot;, &quot;gutter&quot;: 12, &quot;responsive&quot;: {&quot;0&quot;:{&quot;controls&quot;: false},&quot;500&quot;:{&quot;controls&quot;: true}}}"> #}
-                        
+                    <div>                        
                         <div>
                             {% set firstImage = product.images|first %}
                             {% if firstImage %}
@@ -34,8 +23,7 @@
                                     <img class="rounded-3 mx-auto d-block w-50" src="/themes/re/assets/img/logo/white-logo.png" width="400" height="300" alt="Autonoma-v">
                                 </div>
                             {% endif %}
-                        </div>
-                        
+                        </div> 
                     </div>
                 </div>
             </div>
@@ -44,23 +32,26 @@
                     <a class="nav-link stretched-link" href="/rent/{{product.id}}">{{ product.brand ~ ' ' ~ product.model ~ ' ' ~ product.year }}</a>
                 </h3>
                 <p class="mb-2 fs-sm text-muted">{{ product.engine_type }}</p>
-                <div class="fw-bold"><i class="fi-cash mt-n1 me-2 lead align-middle opacity-70"></i>
-                    {{'No ' ~ product.price_offseason_week_4 ~ '€'}}
+                <div class="fw-bold" style="display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <i class="fi-cash mt-n1 me-2 lead align-middle opacity-70"></i>
+                        {{'No ' ~ product.price_offseason_week_4 ~ '€'}}
+                    </div>
+                    <div style="display: inline-block;">
+                        {{ product.beds }} <i class="ti ti-bed" style="font-size: 1.5em;"></i>
+                    </div>
                 </div>
             </div>
             <div class="card-footer d-flex align-items-center justify-content-center mx-3 pt-3 text-nowrap">
                 <span class="d-inline-block mx-1 px-2 fs-sm">
-                    <i class="ti ti-page"></i>
+                    
                 </span>
                 <span class="d-inline-block mx-1 px-2 fs-sm">
-                    2<i class="fi-bed ms-1 mt-n1 fs-lg text-muted"></i>
+                    <i class="ti ti-bike" style="font-size: 1.5em;"></i>
                 </span>
-                <span class="d-inline-block mx-1 px-2 fs-sm">
-                    1<i class="fi-bath ms-1 mt-n1 fs-lg text-muted"></i>
-                </span>
-                <span class="d-inline-block mx-1 px-2 fs-sm">
+                {# <span class="d-inline-block mx-1 px-2 fs-sm">
                     0<i class="fi-car ms-1 mt-n1 fs-lg text-muted"></i>
-                </span>
+                </span> #}
             </div>
         </div>
     </div>
